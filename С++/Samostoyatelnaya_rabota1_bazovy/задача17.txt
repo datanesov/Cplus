@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float r,d;
+    cout << "Введите радиус окружности: ";
+    cin >> r;
+    d = 2 * r;
+    cout << "Диаметр окружности равен " << d << endl;
+    return 0;
+}
+

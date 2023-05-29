@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float r,l,s;
+    const float pi = 3.14159;
+    cout << "Введите радиус окружности: ";
+    cin >> r;
+    l = 2 * pi * r;
+    s = pi * pow(r, 2);
+    cout << "Длина окружности равна " << l << endl;
+    cout << "Площадь круга равна " << s << endl;
+    return 0;
+}
+

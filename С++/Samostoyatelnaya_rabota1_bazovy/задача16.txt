@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float s,p;
+    cout << "Введите длину стороны квадрата: ";
+    cin >> s;
+    p = 4 * s;
+    cout << "Периметр квадрата равен " << p << endl;
+    return 0;
+}

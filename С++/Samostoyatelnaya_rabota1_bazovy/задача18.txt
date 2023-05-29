@@ -1,0 +1,14 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    float h,R,d;
+    const float pi = 3.14159;
+    cout << "Введите высоту над Землей: ";
+    cin >> h;
+    R = 6350;
+    d = 2 * sqrt(pow(h + R, 2) - pow(R, 2));
+    cout << "Расстояние до линии горизонта равно " << d << " км" << endl;
+    return 0;
+}

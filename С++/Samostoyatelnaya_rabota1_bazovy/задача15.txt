@@ -1,0 +1,27 @@
+а)
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    float a,x;
+    cout << "Введите значение a: ";
+    cin >> a;
+    x = sqrt((2 * a + sin(abs(3 * a))) / 3.56);
+    cout << "Значение функции x = sqrt((2a + sin|3a|)/3.56) равно " << x << endl;
+    return 0;
+}
+б)
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    float x,y;
+    cout << "Введите значение x: ";
+    cin >> x;
+    y = sin((3.2 + sqrt(1 + x)) / abs(5 * x));
+    cout << "Значение функции y = sin((3.2 + sqrt(1+x))/|5x|) равно " << y << endl;
+    return 0;
+}
+
