@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Введите степень полинома: ";
+    cin >> n;
+    double coeffs[n+1];
+    cout << "Введите коэффициенты полинома: ";
+    for (int i = 0; i <= n; i++) {
+        cin >> coeffs[i];
+    }
+    double x0;
+    cout << "Введите начальную точку: ";
+    cin >> x0;
+    double x = x0;
+    double fx = 0;
+    double f1x = 0;
+    char choice = 'y';
+    while (choice == 'y') {
+        fx = 0;
+        f1x = 0;
+        for (int i = n; i >= 0; i--) {
+            fx = fx * x + coeffs[i];
+        }
+        for (int i = n; i >= 1; i--) {
+            f1x = f1x * x + i * coeffs[i];
+        }
+        x -= fx / f1x;
+        cout << "Точка пересечения с осью OX: " << x << endl;
+        cout << "Хотите продолжить? (y/n): ";
+        cin >> choice;
+    }
+    return 0;
+}

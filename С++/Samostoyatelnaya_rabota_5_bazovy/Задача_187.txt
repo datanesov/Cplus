@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+char compare(int a, int b){
+    if(a>b){
+        return '>';
+    }
+    else if(a<b){
+        return '<';
+    }
+    else{
+        return '=';
+    }
+}
+
+int main(){
+    int a, b;
+    cout << "Enter two integers: ";
+    cin >> a >> b;
+    cout << a << " " << compare(a,b) << " " << b;
+    return 0;
+}

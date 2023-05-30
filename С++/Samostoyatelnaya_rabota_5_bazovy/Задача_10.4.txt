@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int min(int x, int y){
+    if(x<y){
+        return x;
+    }
+    else{
+        return y;
+    }
+}
+
+int main(){
+    int a, b, z;
+    cout << "Enter the values of a and b: ";
+    cin >> a >> b;
+    z = min(a, 3*b) * min(2*a-b, 2*b);
+    cout << "The value of z = " << z;
+    return 0;
+}

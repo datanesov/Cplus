@@ -1,0 +1,45 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+double polynomial_value(double a[], const int size, double x) {
+    double value = 0;
+    double power = 1;
+    for (int i=0; i<size; i++) {
+        value += a[i] * power;
+        power *= x;
+    }
+    return value;
+}
+
+double polynomial_derivative(double a[], const int size, double x) {
+    double value = 0;
+    double power = 1;
+    for (int i=1; i<size; i++) {
+        value += a[i] * power * i;
+        power *= x;
+    }
+    return value;
+}
+
+double newton_method(double a[], const int size, double x_0) {
+    const double eps = 1e-5;
+    double x = x_0;
+    
+    while (fabs(polynomial_value(a, size, x)) > eps) {
+        x = x - polynomial_value(a, size, x) / polynomial_derivative(a, size, x);
+    }
+    
+    return x;
+}
+
+int main() {
+    const int size = 4;
+    double a[size] = {1, 0, -3, 2}; // полином f(x) = x^3 - 3x + 2
+    double x_0 = 1.5; // начальное приближение
+    
+    cout << "Решение уравнения f(x) = 0 методом Ньютона: ";
+    cout << newton_method(a, size, x_0) << endl;
+    
+    return 0;
+}

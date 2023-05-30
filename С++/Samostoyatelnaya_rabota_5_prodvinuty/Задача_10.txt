@@ -1,0 +1,29 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+double scalar_product(double a[], double b[], const int size) {
+    double sum = 0;
+    for (int i=0; i<size; i++) {
+        sum += a[i] * b[i];
+    }
+    return sum;
+}
+
+double angle_between_vectors(double a[], double b[], const int size) {
+    double scalar = scalar_product(a, b, size);
+    double norm_a = sqrt(scalar_product(a, a, size));
+    double norm_b = sqrt(scalar_product(b, b, size));
+    return acos(scalar / (norm_a * norm_b));
+}
+
+int main() {
+    const int size = 3;
+    double a[size] = {1, 2, 3};
+    double b[size] = {4, 5, 6};
+    
+    cout << "Угол между векторами a и b = ";
+    cout << angle_between_vectors(a, b, size) << endl;
+    
+    return 0;
+}

@@ -1,0 +1,18 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    double a11, a12, a21, a22;
+    cout << "Enter the elements of the matrix A: " << endl;
+    cin >> a11 >> a12 >> a21 >> a22;
+    double det = a11*a22 - a12*a21;
+    double lambda1 = (a11 + a22 + sqrt((a11+a22)*(a11+a22) - 4*(det*4)))/2;
+    double lambda2 = (a11 + a22 - sqrt((a11+a22)*(a11+a22) - 4*(det*4)))/2;
+    if (isnan(lambda1) || isnan(lambda2)) {
+        cout << "The matrix does not have real eigenvalues." << endl;
+    } else {
+        cout << "The eigenvalues of the matrix A are: " << lambda1 << " and " << lambda2 << endl;
+    }
+    return 0;
+}

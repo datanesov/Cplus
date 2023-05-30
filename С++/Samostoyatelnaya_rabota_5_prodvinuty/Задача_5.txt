@@ -1,0 +1,25 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+double coshx(double x, int N) {
+    double ans = 1;
+    double num = 1, den = 1;
+    for(int i = 1; i < N; i++) {
+        num *= -1 * x * x;
+        den *= 2 * i * (2 * i - 1);
+        ans += num / den;
+    }
+    return ans;
+}
+
+int main() {
+    double x;
+    int N;
+    cout << "Enter the value of x: ";
+    cin >> x;
+    cout << "Enter the value of N: ";
+    cin >> N;
+    cout << "cosh(" << x << ") = " << coshx(x, N) << endl;
+    return 0;
+}

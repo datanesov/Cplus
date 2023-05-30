@@ -1,0 +1,14 @@
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    double a1, a2, a3;
+    cout << "Enter the components of the vector: ";
+    cin >> a1 >> a2 >> a3;
+    double mod = sqrt(a1*a1 + a2*a2 + a3*a3);
+    cout << "The modulus of the vector is: " << mod << endl;
+    return 0;
+}
+

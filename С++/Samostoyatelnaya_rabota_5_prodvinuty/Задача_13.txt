@@ -1,0 +1,143 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+double mean_square(double a[], const int size) {
+    double sum = 0;
+    for (int i=0; i<size; i++) {
+        sum += a[i] * a[i];
+    }
+    return sqrt(sum / size);
+}
+
+double mean_square(double a[], const int size, int start, int end) {
+    double sum = 0;
+    for (int i=start; i<=end; i++) {
+        sum += a[i] * a[i];
+    }
+    return sqrt(sum / (end-start+1));
+}
+
+int main() {
+    const int size = 10;
+    double a[size] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    
+    cout << "Среднеквадратичное з
+начение элементов массива = ";
+    cout << mean_square(a, size) << endl;
+    
+    int start = 2, end = 5;
+    cout << "Среднеквадратичное значение элементов массива от " << start << " до " << end << " = ";
+    cout << mean_square(a, size, start, end) << endl;
+    
+    return 0;
+}
+
+```
+
+Задача14:
+
+```c++
+#include <iostream>
+using namespace std;
+
+double polynomial_value(double a[], const int size, double x) {
+    double value = 0;
+    double power = 1;
+    for (int i=0; i<size; i++) {
+        value += a[i] * power;
+        power *= x;
+    }
+    return value;
+}
+
+int main() {
+    const int size = 4;
+    double a[size] = {1, 2, 3, 4};
+    double x = 2;
+    
+    cout << "Значение полинома для x = " << x << " равно ";
+    cout << polynomial_value(a, size, x) << endl;
+    
+    return 0;
+}
+```
+
+Задача15:
+
+```c++
+#include <iostream>
+using namespace std;
+
+double polynomial_derivative(double a[], const int size, double x) {
+    double value = 0;
+    double power = 1;
+    for (int i=1; i<size; i++) { // начинаем с элемента с номером 1, чтобы получить производную
+        value += a[i] * power * i;
+        power *= x;
+    }
+    return value;
+}
+
+int main() {
+    const int size = 4;
+    double a[size] = {1, 2, 3, 4};
+    double x = 2;
+    
+    cout << "Значение производной полинома для x = " << x << " равно ";
+    cout << polynomial_derivative(a, size, x) << endl;
+    
+    return 0;
+}
+```
+
+Задача16:
+
+```c++
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+double polynomial_value(double a[], const int size, double x) {
+    double value = 0;
+    double power = 1;
+    for (int i=0; i<size; i++) {
+        value += a[i] * power;
+        power *= x;
+    }
+    return value;
+}
+
+double polynomial_derivative(double a[], const int size, double x) {
+    double value = 0;
+    double power = 1;
+    for (int i=1; i<size; i++) {
+        value += a[i] * power * i;
+        power *= x;
+    }
+    return value;
+}
+
+double newton_method(double a[], const int size, double x_0) {
+    const double eps = 1e-5;
+    double x = x_0;
+    
+    while (fabs(polynomial_value(a, size, x)) > eps) {
+        x = x - polynomial_value(a, size, x) / polynomial_derivative(a, size, x);
+    }
+    
+    return x;
+}
+
+int main() {
+    const int size = 4;
+    double a[size] = {1, 0, -3, 2}; // полином f(x) = x^3 - 3x + 2
+    double x_0 = 1.5; // начальное приближение
+    
+    cout << "Решение уравнения f(x) = 0 методом Ньютона: ";
+    cout << newton_method(a, size, x_0) << endl;
+    
+    return 0;
+}
+```
+

@@ -1,0 +1,17 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    double a1, a2, a3, b1, b2, b3;
+    cout << "Enter the components of vector a: ";
+    cin >> a1 >> a2 >> a3;
+    cout << "Enter the components of vector b: ";
+    cin >> b1 >> b2 >> b3;
+    double dotprod = a1*b1 + a2*b2 + a3*b3;
+    double modprod = sqrt(a1*a1 + a2*a2 + a3*a3) * sqrt(b1*b1 + b2*b2 + b3*b3);
+    double angle = acos(dotprod/modprod);
+    cout << "The angle between vectors a and b is: " << angle << " radians." << endl;
+    return 0;
+}
+

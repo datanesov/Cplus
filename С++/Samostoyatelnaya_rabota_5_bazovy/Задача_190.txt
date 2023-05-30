@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+float percent(float num, float per){
+    float res = (per/100) * num;
+    return res;
+}
+
+int main(){
+    float num, per;
+    cout << "Enter a number and percentage to calculate: ";
+    cin >> num >> per;
+    cout << per << "% of " << num << " is: " << percent(num, per);
+    return 0;
+}

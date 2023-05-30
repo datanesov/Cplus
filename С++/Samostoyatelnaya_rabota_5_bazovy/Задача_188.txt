@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+float findResistor(float r1, float r2, char connType){
+    float res;
+    if(connType=='p'){
+        res = (r1*r2)/(r1+r2);
+    }
+    else if(connType=='s'){
+        res = r1+r2;
+    }
+    else{
+        return -1;
+    }
+    return res;
+}
+
+int main(){
+    float r1, r2;
+    char connType;
+    cout << "Enter values of two resistors and type of connection (p for parallel and s for series): ";
+    cin >> r1 >> r2 >> connType;
+    float result = findResistor(r1,r2,connType);
+    if(result==-1){
+        cout << "Incorrect connection type entered!";
+    }
+    else{
+        cout << "Equivalent resistance: " << result << " ohm";
+    }
+    return 0;
+}

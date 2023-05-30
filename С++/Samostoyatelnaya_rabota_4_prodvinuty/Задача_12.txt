@@ -1,0 +1,23 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Введите размер массива: ";
+    cin >> n;
+    int arr[n];
+    cout << "Введите элементы массива: ";
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
+    double sq_sum = 0;
+    for (int i = 0; i < n; i++) {
+        sq_sum += pow(arr[i], 2);
+    }
+    double avg = sq_sum / n;
+    double root_mean_square = sqrt(avg);
+    cout << "Среднеквадратичное значение: " << root_mean_square << endl;
+    return 0;
+}
+

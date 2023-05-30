@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+double polynomial_value(double a[], const int size, double x) {
+    double value = 0;
+    double power = 1;
+    for (int i=0; i<size; i++) {
+        value += a[i] * power;
+        power *= x;
+    }
+    return value;
+}
+
+int main() {
+    const int size = 4;
+    double a[size] = {1, 2, 3, 4};
+    double x = 2;
+    
+    cout << "Значение полинома для x = " << x << " равно ";
+    cout << polynomial_value(a, size, x) << endl;
+    
+    return 0;
+}

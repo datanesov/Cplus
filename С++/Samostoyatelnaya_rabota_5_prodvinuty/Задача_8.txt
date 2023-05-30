@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int factorial(int n) {
+    int result = 1;
+    for (int i=n; i>0; i-=2) {
+        result *= i;
+    }
+    return result;
+}
+
+int main() {
+    int n;
+    cout << "Введите число n: ";
+    cin >> n;
+    cout << "Значение двойного факториала " << n << "!! = ";
+    cout << factorial(n) << endl;
+    return 0;
+}

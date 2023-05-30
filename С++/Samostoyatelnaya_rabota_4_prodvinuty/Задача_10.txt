@@ -1,0 +1,22 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    const int size = 4;
+    double vals[size] = {1, 2, 3, 4};
+    double probs[size] = {0.25, 0.25, 0.25, 0.25}; // sum of probabilities should be 1
+    int order;
+    cout << "Enter the order of the central moment: ";
+    cin >> order;
+    double mean = 0;
+    for (int i = 0; i < size; i++) {
+        mean += vals[i] * probs[i];
+    }
+    double cent_moment = 0;
+    for (int i = 0; i < size; i++) {
+        cent_moment += pow((vals[i] - mean), order) * probs[i];
+    }
+    cout << "The central moment of order " << order << " is: " << cent_moment << endl;
+    return 0;
+}

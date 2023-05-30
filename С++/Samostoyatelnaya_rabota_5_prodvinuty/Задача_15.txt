@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+double polynomial_derivative(double a[], const int size, double x) {
+    double value = 0;
+    double power = 1;
+    for (int i=1; i<size; i++) { // начинаем с элемента с номером 1, чтобы получить производную
+        value += a[i] * power * i;
+        power *= x;
+    }
+    return value;
+}
+
+int main() {
+    const int size = 4;
+    double a[size] = {1, 2, 3, 4};
+    double x = 2;
+    
+    cout << "Значение производной полинома для x = " << x << " равно ";
+    cout << polynomial_derivative(a, size, x) << endl;
+    
+    return 0;
+}
+

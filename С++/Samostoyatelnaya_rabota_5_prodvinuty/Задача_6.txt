@@ -1,0 +1,25 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+double ln1px(double x, int N) {
+    double ans = 0;
+    double num = x, den = 1;
+    for(int i = 1; i < N; i++) {
+        ans += num / den;
+        num *= -1 * x;
+        den += 2;
+    }
+    return ans;
+}
+
+int main() {
+    double x;
+    int N;
+    cout << "Enter the value of x: ";
+    cin >> x;
+    cout << "Enter the value of N: ";
+    cin >> N;
+    cout << "ln(1 + " << x << ") = " << ln1px(x, N) << endl;
+    return 0;
+}
