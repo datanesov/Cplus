@@ -1,0 +1,229 @@
+#include <iostream>
+
+int main()
+{
+    int n;
+    float sum = 0.0;
+    std::cout << "Enter value of n: ";
+    std::cin >> n;
+
+    for (int i = 0; i < n; i++)
+    {
+        float a;
+        std::cout << "Enter a" << i + 1 << ": ";
+        std::cin >> a;
+        sum += (a * a);
+    }
+
+    std::cout << "Sum of squares of numbers i
+s: " << sum << std::endl;
+
+    return 0;
+}
+
+```
+
+5.50.
+
+```cpp
+#include <iostream>
+
+int main()
+{
+    int n;
+    float sum = 0.0;
+    std::cout << "Enter value of n: ";
+    std::cin >> n;
+    float a[n];
+
+    for (int i = 0; i < n; i++)
+    {
+        std::cout << "Enter a" << i + 1 << ": ";
+        std::cin >> a[i];
+        sum += a[i];
+    }
+
+    float average = sum / n;
+
+    std::cout << "Average of numbers is: " << average << std::endl;
+
+    return 0;
+}
+```
+
+5.51.
+
+```cpp
+#include <iostream>
+
+int main()
+{
+    int n;
+    float sum = 0.0;
+    std::cout << "Enter value of n: ";
+    std::cin >> n;
+    float a[n];
+
+    for (int i = 0; i < n; i++)
+    {
+        std::cout << "Enter a" << i + 1 << ": ";
+        std::cin >> a[i];
+        sum += a[i];
+    }
+
+    float average = sum / n;
+
+    std::cout << "Average of numbers is: " << average << std::endl;
+
+    return 0;
+}
+```
+
+5.52.
+
+```cpp
+#include <iostream>
+
+int main()
+{
+    int total_marks = 0;
+    int marks[20];
+
+    for (int i = 0; i < 20; i++)
+    {
+        std::cout << "Enter marks for student " << i + 1 << ": ";
+        std::cin >> marks[i];
+        total_marks += marks[i];
+    }
+
+    float average_marks = (float)total_marks / 20;
+
+    std::cout << "Average marks for the class is: " << average_marks << std::endl;
+
+    return 0;
+}
+```
+
+5.53.
+
+```cpp
+#include <iostream>
+
+int main()
+{
+    int total_marks = 0;
+    int marks[10];
+
+    for (int i = 0; i < 10; i++)
+    {
+        std::cout << "Enter marks for subject " << i + 1 << ": ";
+        std::cin >> marks[i];
+        total_marks += marks[i];
+    }
+
+    float average_marks = (float)total_marks / 10;
+
+    std::cout << "Average marks for the student is: " << average_marks << std::endl;
+
+    return 0;
+}
+```
+
+5.54.
+
+```cpp
+#include <iostream>
+
+int main()
+{
+    int total_marks = 0;
+    int marks[20];
+
+    for (int i = 0; i < 20; i++)
+    {
+        std::cout << "Enter marks for student " << i + 1 << ": ";
+        std::cin >> marks[i];
+        total_marks += marks[i];
+    }
+
+    float average_marks = (float)total_marks / 20;
+
+    std::cout << "Average marks for the class is: " << average_marks << std::endl;
+
+    return 0;
+}
+```
+
+5.55.
+
+```cpp
+#include <iostream>
+
+int main()
+{
+    int n;
+    int total_weight = 0;
+
+    std::cout << "Enter value of n: ";
+    std::cin >> n;
+    float weights[n];
+
+    for (int i = 0; i < n; i++)
+    {
+        std::cout << "Enter weight of item " << i + 1 << ": ";
+        std::cin >> weights[i];
+        total_weight += weights[i];
+    }
+
+    float average_weight = (float)total_weight / n;
+
+    std::cout << "Average weight of items is: " << average_weight << std::endl;
+
+    return 0;
+}
+```
+
+5.56.
+
+```cpp
+#include <iostream>
+
+int main()
+{
+    int n;
+    float sum1 = 0.0, sum2 = 1.0, sum3 = 0.0;
+
+    std::cout << "Enter value of n: ";
+    std::cin >> n;
+    float a[n];
+
+    for (int i = 0; i < n; i++)
+    {
+        std::cout << "Enter a" << i + 1 << ": ";
+        std::cin >> a[i];
+        sum1 += abs(a[i]);
+        sum2 *= abs(a[i]);
+        if (i < n - 1)
+        {
+            sum3 += (a[i] + a[i + 1]);
+        }
+    }
+
+    std::cout << "|a1| + |a2| + ... + |an| = " << sum1 << std::endl;
+    std::cout << "|a1| * |a2| * ... * |an| = " << sum2 << std::endl;
+    std::cout << "a1 + a2, a2 + a3, ..., an-1 + an = " << sum3 << std::endl;
+
+    return 0;
+}
+```
+
+5.57.
+
+```cpp
+#include <iostream>
+
+int main()
+{
+    int sum1 = 0, sum2 = 0;
+    int
+

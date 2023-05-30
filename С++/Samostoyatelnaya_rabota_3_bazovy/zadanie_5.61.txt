@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double height1[20], height2[20], sum1 = 0, sum2 = 0;
+    cout << "Enter height of 20 students in class 1 (in cm):";
+    for(int i=0; i<20; i++) {
+        cin >> height1[i];
+        sum1 += height1[i];
+    }
+    cout << "Average height of class 1: " << sum1/20 << " cm" << endl;
+    cout << "Enter height of 20 students in class 2 (in cm):";
+    for(int i=0; i<20; i++) {
+        cin >> height2[i];
+        sum2 += height2[i];
+    }
+    cout << "Average height of class 2: " << sum2/20 << " cm" << endl;
+    return 0;
+}

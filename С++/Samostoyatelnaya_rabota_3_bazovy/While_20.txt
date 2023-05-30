@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+    int n;
+    bool hasTwo = false;
+    cin >> n;
+    while(n > 0) {
+        if(n % 10 == 2) {
+            hasTwo = true;
+            break;
+        }
+        n /= 10;
+    }
+    if(hasTwo) {
+        cout << "True";
+    } else {
+        cout << "False";
+    }
+    return 0;
+}
+

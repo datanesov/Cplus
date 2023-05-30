@@ -1,0 +1,12 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+  const double rho0 = 1.29, z = 1725.107;
+  for (int h = 0; h <= 1000; h += 100) {
+    double rho = rho0 * exp(-h / z);
+    cout << "Высота: " << h << " м, плотность: " << rho << " кг/м^3" << endl;
+  }
+  return 0;
+}

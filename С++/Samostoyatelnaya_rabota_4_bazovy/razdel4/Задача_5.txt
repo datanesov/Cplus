@@ -1,0 +1,41 @@
+
+#include <iostream>
+#in
+clude <vector>
+
+using namespace std;
+
+int main()
+{
+    vector<vector<int>> matrix = vector<vector<int>>(3, vector<int>(3)); //создание двумерного массива
+
+    int n = 3, num = 0;
+    int row = n/2, col = n/2;
+    int dir = 0;
+    int dx[] = {0, 1, 0, -1}; //направление движения
+    int dy[] = {1, 0, -1, 0};
+    int len[] = {1, 1, 2, 2}; //длина перемещения в каждом направлении
+
+    matrix[row][col] = ++num; //начальное значение
+
+    for(int i = 0; i < 4; i++)
+    {
+        for(int j = 0; j < len[i]; j++)
+        {
+            row += dx[dir];
+            col += dy[dir];
+            matrix[row][col] = ++num;
+        }
+        dir++;
+        dir = dir % 4;
+    }
+
+    for(int i = 0; i < n; i++)
+    {
+        for(int j = 0; j < n; j++)
+            cout << matrix[i][j] << " ";
+        cout << endl;
+    }
+
+    return 0;
+}

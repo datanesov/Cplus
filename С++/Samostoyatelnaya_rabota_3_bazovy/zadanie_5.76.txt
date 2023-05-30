@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double a;
+    int n;
+    cout << "Enter a and n: ";
+    cin >> a >> n;
+    double result = 1;
+    for (int i = 1; i <= n; i++) {
+        result *= a;
+    }
+    cout << "a^n = " << result;
+    return 0;
+}
+s

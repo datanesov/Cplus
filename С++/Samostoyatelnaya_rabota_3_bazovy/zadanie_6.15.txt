@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    double a = 1.3; // задаем значение а
+    
+    // проходим по последовательности с помощью цикла for
+    for (int n = 1; n <= 3; n++) {
+        double num = 1 + 1.0 / n; // вычисляем текущее число последовательности
+        if (num < a) cout << num << endl; // если число меньше а, выводим его
+    }
+    return 0;
+}

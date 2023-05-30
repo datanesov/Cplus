@@ -1,0 +1,30 @@
+
+#include <iostream>
+using namespace std;
+
+int main() {
+  int n, m, num;
+  cout << "Enter the size of matrix: ";
+  cin >> n >> m;
+  int mat[n][m];
+  for(int i=0;i<n;i++){
+      for(int j=0;j<m;j++){
+          cout<<"Enter element "<<i<<","<<j<<": ";
+          cin>>mat[i][j];
+
+      }
+  }
+  cout<<"Enter the number to find: ";
+  cin>>num;
+  int count=0;
+  for(int i=0;i<n;i++){
+      for(int j=0;j<m;j++){
+          if(mat[i][j]==num){
+              cout<<num<<" found at "<<i<<","<<j<<endl;
+              count++;
+          }
+      }
+  }
+  cout<<"Total number of elements found: "<<count<<endl;
+  return 0;
+}

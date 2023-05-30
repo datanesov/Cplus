@@ -1,0 +1,9 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int n, minutes;
+    cin >> n;
+    minutes = n / 60;
+    cout << minutes << endl;
+    return 0;
+}

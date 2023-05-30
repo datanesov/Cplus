@@ -1,0 +1,9 @@
+#include <iostream>
+
+int main() {
+    double m, a, u, F;
+    std::cin >> m >> a >> u;
+    F = (std::tan(a) < u) ? 0 : m * 9.81 * (std::sin(a) - u * std::cos(a));
+    std::cout << F << std::endl;
+    return 0;
+}

@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float R, L, S;
+    cout << "Enter the radius of the circle: ";
+    cin >> R;
+    L = 2 * 3.14 * R;
+    S = 3.14 * pow(R, 2);
+    cout << "Length of the circle is: " << L << endl;
+    cout << "Area of the circle is: " << S << endl;
+    return 0;
+}

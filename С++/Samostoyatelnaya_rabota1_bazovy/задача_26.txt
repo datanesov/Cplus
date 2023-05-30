@@ -1,0 +1,11 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main(){
+    double a,b,c;
+    cin>>a>>b; //ввод катетов треугольника
+    c=sqrt(a*a+b*b); //находим гипотенузу
+    cout<<c;
+    return 0;
+}
+

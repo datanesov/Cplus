@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a,b,product=1;
+    cout<<"Input A and B (A<B): ";
+    cin>>a>>b;
+    for(int i=a;i<=b;i++){
+        product*=i;
+    }
+    cout<<"Product of integers from "<<a<<" to "<<b<<" is "<<product<<endl;
+    return 0;
+}

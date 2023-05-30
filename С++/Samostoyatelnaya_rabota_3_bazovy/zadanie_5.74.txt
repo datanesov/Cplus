@@ -1,0 +1,21 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    const int numSpheres = 12;
+    const double wallThickness = 0.005;
+    const double innerDiameter = 0.1;
+    double totalVolume = 0;
+    double radius = (innerDiameter - wallThickness)/2;
+
+    for(int i=1; i<=numSpheres; i++) {
+        double sphereVolume = (4.0/3.0) * M_PI * pow(radius, 3);
+        totalVolume += sphereVolume;
+        radius += wallThickness;
+    }
+
+    cout << "Суммарный объем шаров: " << totalVolume << " литров" << endl;
+
+    return 0;
+}

@@ -1,0 +1,16 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int x, result;
+    cout << "Enter an integer x: ";
+    cin >> x;
+    if (x == -2 || x >= 2)
+        result = 2 * x;
+    else
+        result = -3 * x;
+    cout << "f(x) = " << result << endl;
+    return 0;
+}

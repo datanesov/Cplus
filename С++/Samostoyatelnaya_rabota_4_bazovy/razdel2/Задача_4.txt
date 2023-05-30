@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    const int size = 10; // размер массива
+    int arr[size];
+    int max_index = 0; // индекс максимального элемента
+    int temp; // временная переменная для обмена элементов
+
+    // ввод элементов массива и поиск максимального элемента
+    for (int i = 0; i < size; i++) {
+        cout << "Enter value " << i + 1 << ": ";
+        cin >> arr[i];
+        if (arr[i] > arr[max_index]) {
+            max_index = i;
+        }
+    }
+
+    // обмен максимального элемента с первым элементом
+    temp = arr[0];
+    arr[0] = arr[max_index];
+    arr[max_index] = temp;
+
+    // вывод массива после обмена элементов
+    for (int i = 0; i < size; i++) {
+        cout << arr[i] << " ";
+    }
+
+    return 0;
+}

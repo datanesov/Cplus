@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a1, a2, b1, b2;
+    cout << "Enter grades of two students for four subjects:";
+    cin >> a1 >> a2 >> b1 >> b2;
+    int sum1 = a1 + a2, sum2 = b1 + b2;
+    cout << "Sum of grades for student A: " << sum1 << endl;
+    cout << "Sum of grades for student B: " << sum2 << endl;
+    return 0;
+}

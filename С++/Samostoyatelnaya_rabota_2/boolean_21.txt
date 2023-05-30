@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num;
+    cin >> num;
+    int first = num / 100;
+    int second = (num / 10) % 10;
+    int third = num % 10;
+    bool result = (first < second && second < third);
+    if (result) {
+        cout << "True\n";
+    } else {
+        cout << "False\n";
+    }
+    return 0;
+}

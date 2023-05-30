@@ -1,0 +1,180 @@
+а)
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int a = 2;
+    int a2 = a * a; // a^2
+    int a4 = a2 * a2; // a^4
+    cout << "a^4 = " << a4 << endl;
+    return 0;
+}
+
+б)
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int a = 2;
+    int a2 = a * a; // a^2
+    int a3 = a2 * a; // a^3
+    int a5 = a3 * a2; // a^5
+    cout << "a^5 = " << a5 << endl;
+    return 0;
+}
+
+в)
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int a = 2;
+    int a2 = a * a; // a^2
+    int a4 = a2 * a2; // a^4
+    int a7 = a4 * a2 * a; // a^7
+    cout << "a^7 = " << a7 << endl;
+    return 0;
+}
+
+г)
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int a = 2;
+    int a2 = a * a; // a^2
+    int a4 = a2 * a2; // a^4
+    int a8 = a4 * a4; // a^8
+    cout << "a^8 = " << a8 << endl;
+    return 0;
+}
+
+д)
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int a = 2;
+    int a2 = a * a; // a^2
+    int a4 = a2 * a2; // a^4
+    int a8 = a4 * a4; // a^8
+    int a9 = a8 * a; // a^9
+    cout << "a^9 = " << a9 << endl;
+    return 0;
+}
+
+е)
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int a = 2;
+    int a2 = a * a; // a^2
+    int a4 = a2 * a2; // a^4
+    int a8 = a4 * a4; // a^8
+    int a10 = a8 * a2; // a^10
+    cout << "a^10 = " << a10 << endl;
+    return 0;
+}
+
+ж)
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int a = 2;
+    int a2 = a * a; // a^2
+    int a4 = a2 * a2; // a^4
+    int a8 = a4 * a4; // a^8
+    int a12 = a4 * a4 * a4; // a^12
+    int a13 = a12 * a; // a^13
+    cout << "a^13 = " << a13 << endl;
+    return 0;
+}
+
+з)
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int a = 2;
+    int a2 = a * a; // a^2
+    int a4 = a2 * a2; // a^4
+    int a8 = a4 * a4; // a^8
+    int a16 = a8 * a8; // a^16
+    int a24 = a16 * a8; // a^24
+    int a25 = a24 * a; // a^25
+    cout << "a^25 = " << a25 << endl;
+    return 0;
+}
+
+и)
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int a = 2;
+    int a2 = a * a; // a^2
+    int a4 = a2 * a2; // a^4
+    int a8 = a4 * a4; // a^8
+    int a16 = a8 * a8; // a^16
+    int a20 = a16 * a4; // a^20
+    int a21 = a20 * a; // a^21
+    cout << "a^21 = " << a21 << endl;
+    return 0;
+}
+
+к)
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int a = 2;
+    int a2 = a * a; // a^2
+    int a4 = a2 * a2; // a^4
+    int a8 = a4 * a4; // a^8
+    int a16 = a8 * a8; // a^16
+    int a24 = a16 * a8; // a^24
+    int a28 = a24 * a4; // a^28
+    cout << "a^28 = " << a28 << endl;
+    return 0;
+}
+
+л)
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int a = 2;
+    int a2 = a * a; // a^2
+    int a4 = a2 * a2; // a^4
+    int a8 = a4 * a4; // a^8
+    int a16 = a8 * a8; // a^16
+    int a32 = a16 * a16; // a^32
+    int a64 = a32 * a32; // a^64
+    cout << "a^64 = " << a64 << endl;
+    return 0;
+}
+

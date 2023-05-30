@@ -1,0 +1,19 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    float x1, y1, x2, y2;
+    cout << "Enter coordinates of opposite vertices of rectangle:\n";
+    cin >> x1 >> y1 >> x2 >> y2;
+
+    float length = abs(x2 - x1);
+    float width = abs(y2 - y1);
+    float perimeter = 2 * (length + width);
+    float area = length * width;
+
+    cout << "Perimeter: " << perimeter << endl;
+    cout << "Area: " << area << endl;
+
+    return 0;
+}

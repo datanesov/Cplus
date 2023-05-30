@@ -1,0 +1,119 @@
+а)
+#include <iostream>
+using namespace std;
+
+int main() {
+    const int ROWS = 5;
+    int arr[ROWS][ROWS];
+
+    // заполнение массива
+    for (int i = 0; i < ROWS; i++) {
+        for (int j = 0; j <= i; j++) {
+            if (j == 0) {
+                arr[i][j] = i;
+            } else {
+                arr[i][j] = arr[i][j-1] - 1;
+            }
+        }
+    }
+
+    // вывод массива на экран
+    for (int i = 0; i < ROWS; i++) {
+        for (int j = 0; j <= i; j++) {
+            cout << arr[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+б)
+#include <iostream>
+using namespace std;
+
+int main() {
+    const int ROWS = 5;
+    const int COLS = 5;
+    int arr[ROWS][COLS];
+
+    // заполнение массива
+    for (int i = 0; i < ROWS; i++) {
+        for (int j = i; j < COLS; j++) {
+            if (j == i) {
+                arr[i][j] = 6 + i;
+            } else {
+                arr[i][j] = arr[i][j-1] - 1;
+            }
+        }
+    }
+
+    // вывод массива на экран
+    for (int i = 0; i < ROWS; i++) {
+        for (int j = 0; j < COLS-i; j++) {
+            cout << arr[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+в)
+#include <iostream>
+using namespace std;
+
+int main() {
+    const int ROWS = 5;
+    const int COLS = 5;
+    int arr[ROWS][COLS];
+
+    // заполнение массива
+    for (int i = 0; i < ROWS; i++) {
+        for (int j = ROWS-i-1; j < COLS; j++) {
+            if (i == 0) {
+                arr[i][j] = 30;
+            } else {
+                arr[i][j] = arr[i-1][j] - 1;
+            }
+        }
+    }
+
+    // вывод массива на экран
+    for (int i = 0; i < ROWS; i++) {
+        for (int j = 0; j < COLS-i; j++) {
+            cout << arr[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+г)
+#include <iostream>
+using namespace std;
+
+int main() {
+    const int ROWS = 5;
+    const int COLS = 5;
+    int arr[ROWS][COLS];
+
+    // заполнение массива
+    for (int i = 0; i < ROWS; i++) {
+        for (int j = i; j < COLS; j++) {
+            if (i == 0) {
+                arr[i][j] = 20 + j;
+            } else {
+                arr[i][j] = arr[i-1][j-1];
+            }
+        }
+    }
+
+    // вывод массива на экран
+    for (int i = 0; i < ROWS; i++) {
+        for (int j = 0; j < COLS-i; j++) {
+            cout << arr[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}

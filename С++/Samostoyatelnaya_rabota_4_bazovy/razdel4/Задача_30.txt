@@ -1,0 +1,41 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+    int n, m;
+    cout << "Введите размер матрицы (n x m): ";
+    cin >> n >> m;
+
+    int matrix[n][m];
+    cout << "Введите элементы матрицы: " << endl;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            cin >> matrix[i][j];
+        }
+    }
+
+    vector<int> counts(n, 0);
+    int max_count = -1;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            for (int k = j+1; k < m; k++) {
+                if (matrix[i][j] == matrix[i][k]) {
+                    counts[i]++;
+                }
+            }
+            if (counts[i] > max_count) {
+                max_count = counts[i];
+            }
+        }
+    }
+
+    for (int i = 0; i < n; i++) {
+        if (counts[i] == max_count) {
+            cout << "Номер строки, содержащей максимальное число одинаковых элементов: " << i+1 << endl;
+            break;
+        }
+    }
+    return 0;
+}

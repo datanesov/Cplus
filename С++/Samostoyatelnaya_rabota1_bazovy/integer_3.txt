@@ -1,0 +1,43 @@
+ChatGPT (беседа № 20):
+
+Программа для задачи Integer1:
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int L;
+    cout << "Enter distance in centimeters: ";
+    cin >> L;
+    int meters = L/100;
+    cout << "The distance in full meters is " << meters << endl;
+    return 0;
+}
+
+Программа для задачи Integer2:
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int M;
+    cout << "Enter mass in kilograms: ";
+    cin >> M;
+    int tons = M/1000;
+    cout << "The mass in full tons is " << tons << endl;
+    return 0;
+}
+
+Программа для задачи Integer3:
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int file_size;
+    cout << "Enter file size in bytes: ";
+    cin >> file_size;
+    int kilobytes = file_size/1024;
+    cout << "The file size in full kilobytes is " << kilobytes << endl;
+    return 0;
+}

@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int units;
+    float length;
+    cout << "Enter a unit number (1 for decimeter, 2 for kilometer, 3 for meter, 4 for millimeter, 5 for centimeter): ";
+    cin >> units;
+    cout << "Enter the length: ";
+    cin >> length;
+    switch (units) {
+        case 1:
+            length /= 10; // convert to meters
+            break;
+        case 2:
+            length *= 1000; // convert to meters
+            break;
+        case 3:
+            // length is already in meters
+            break;
+        case 4:
+            length /= 1000; // convert to meters
+            break;
+        case 5:
+            length /= 100; // convert to meters
+            break;
+        default:
+            cout << "Invalid unit";
+            return 0
+;
+    }
+    cout << "Length in meters: " << length;
+    return 0;
+}

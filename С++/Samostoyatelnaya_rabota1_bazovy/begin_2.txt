@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float a, S;
+    cout << "Enter side of square: ";
+    cin >> a;
+    S = a * a;
+    cout << "Area of the square is: " << S << endl;
+    return 0;
+}

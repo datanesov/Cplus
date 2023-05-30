@@ -1,0 +1,10 @@
+#include <iostream>
+
+int main() {
+    double V1, V2, P1, P2, V;
+    std::cin >> V1 >> V2 >> P1 >> P2;
+    V = ((P2 * V2 - P1 * V1) / (P1 - P2) < 0) ? 0 : (P2 * V2 - P1 * V1) / (P1 - P2);
+    std::cout << V << std::endl;
+    return 0;
+}
+

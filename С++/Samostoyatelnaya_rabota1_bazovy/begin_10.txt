@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float a, b, sum, diff, prod, quotient;
+    cout << "Enter two non-zero numbers: ";
+    cin >> a >> b;
+    sum = pow(a, 2) + pow(b, 2);
+    diff = pow(a, 2) - pow(b, 2);
+    prod = pow(a, 2) * pow(b, 2);
+    quotient = pow(a, 2) / pow(b, 2);
+    cout << "Sum of the squares of the two numbers is: " << sum << endl;
+    cout << "Difference of the squares of the two numbers is: " << diff << endl;
+    cout << "Product of the squares of the two numbers is: " << prod << endl;
+    cout << "Quotient of the squares of the two numbers is: " << quotient << endl;
+    return 0;
+}

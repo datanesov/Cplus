@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    // a
+    int sum_a = 0;
+    for(int i = 1; i <= 1000; i++) {
+        sum_a += i;
+    }
+    double avg_a = (double)sum_a / 1000;
+    cout << "Average from 1 to 1000: " << avg_a << endl;
+  
+    // b
+    cout << "Enter a number: ";
+    int num_b, sum_b = 0;
+    cin >> num_b;
+    for(int i = 100; i <= num_b; i++) {
+        sum_b += i;
+    }
+    double avg_b = (double)sum_b / (num_b - 99);
+    cout << "Average from 100 to " << num_b << ": " << avg_b << endl;
+  
+    // c
+    cout << "Enter two numbers: ";
+    int num_c1, num_c2, sum_c = 0;
+    cin >> num_c1 >> num_c2;
+    for(int i = num_c1; i <= num_c2; i++) {
+        sum_c += i;
+    }
+    double avg_c = (double)sum_c / (num_c2 - num_c1 + 1);
+    cout << "Average from " << num_c1 << " to " << num_c2 << ": " << avg_c << endl;
+  
+    return 0;
+}
+

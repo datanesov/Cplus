@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    // a
+    int prod_a = 1;
+    for(int i = 8; i <= 15; i++) {
+        prod_a *= i;
+    }
+    cout << "Product from 8 to 15: " << prod_a << endl;
+  
+    // b
+    cout << "Enter a number: ";
+    int num_b, prod_b = 1;
+    cin >> num_b;
+    for(int i = num_b; i <= 20; i++) {
+        prod_b *= i;
+    }
+    cout << "Product from " << num_b << " to 20: " << prod_b << endl;
+  
+    // c
+    cout << "Enter a number: ";
+    int num_c, prod_c = 1;
+    cin >> num_c;
+    for(int i = 1; i <= num_c; i++) {
+        prod_c *= i;
+    }
+    cout << "Product from 1 to " << num_c << ": " << prod_c << endl;
+  
+    // d
+    cout << "Enter two numbers: ";
+    int num_d1, num_d2, prod_d = 1;
+    cin >> num_d1 >> num_d2;
+    for(int i = num_d1; i <= num_d2; i++) {
+        prod_d *= i;
+    }
+    cout << "Product from " << num_d1 << " to " << num_d2 << ": " << prod_d << endl;
+  
+    return 0;
+}
+

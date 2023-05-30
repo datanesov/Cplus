@@ -1,0 +1,17 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+ float AC, BC, sum;
+    cout << "Enter the coordinates of three points on the number line: ";
+    cin >> a >> b >> c;
+    AC = abs(c - a);
+    BC = abs(c - b);
+    sum = AC + BC;
+    cout << "Length of AC: " << AC << endl;
+    cout << "Length of BC: " << BC << endl;
+    cout << "Sum of lengths AC and BC: " << sum << endl;
+ return 0;
+}

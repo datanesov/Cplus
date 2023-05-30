@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Enter a three-digit number: ";
+    cin >> n;
+    int hundreds = n/100;
+    cout << "The first digit of the number is " << hundreds << endl;
+    return 0;
+}

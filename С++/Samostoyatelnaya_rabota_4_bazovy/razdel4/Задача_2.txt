@@ -1,0 +1,22 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main()
+{
+    vector<vector<int>> matrix = vector<vector<int>>(4, vector<int>(4)); //создание двумерного массива
+
+    for(int i = 0; i < matrix.size(); i++)
+        for(int j = 0; j < matrix.size(); j++)
+            matrix[i][j] = (i+j)%2; //заполнение массива 0 и 1 в шахматном порядке
+
+    for(int i = 0; i < matrix.size(); i++)
+    {
+        for(int j = 0; j < matrix.size(); j++)
+            cout << matrix[i][j];
+        cout << endl;
+    }
+
+    return 0;
+}

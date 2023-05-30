@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int sum = 0, powerOfTwo = 2;
+    for(int i=2; i<=10; i++) {
+        sum += powerOfTwo;
+        powerOfTwo *= 2;
+    }
+    cout << "Сумма степеней двойки от 2 до 10: " << sum << endl;
+
+    return 0;
+}

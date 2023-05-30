@@ -1,0 +1,51 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num1, num2, num3, pos_count = 0, neg_count = 0;
+    cout << "Enter three integers: ";
+    cin >> num1 >> num2 >> num3;
+    if (num1 > 0) {
+        pos_count += 1;
+    } else if (num1 < 0) {
+        neg_count += 1;
+    }
+    if (num2 > 0) {
+        pos_count += 1;
+    } else if (num2 < 0) {
+        neg_count += 1;
+    }
+    if (num3 > 0) {
+        pos_count += 1;
+    } else if (num3 < 0) {
+        neg_count += 1;
+    }
+    cout << "Number of positive integers: " << pos_count << endl;
+    cout << "Number of negative integers: " << neg_count << endl;
+    return 0;
+}#include <iostream>
+using namespace std;
+
+int main() {
+    int num1, num2, num3, pos_count = 0, neg_count = 0;
+    cout << "Enter three integers: ";
+    cin >> num1 >> num2 >> num3;
+    if (num1 > 0) {
+        pos_count += 1;
+    } else if (num1 < 0) {
+        neg_count += 1;
+    }
+    if (num2 > 0) {
+        pos_count += 1;
+    } else if (num2 < 0) {
+        neg_count += 1;
+    }
+    if (num3 > 0) {
+        pos_count += 1;
+    } else if (num3 < 0) {
+        neg_count += 1;
+    }
+    cout << "Number of positive integers: " << pos_count << endl;
+    cout << "Number of negative integers: " << neg_count << endl;
+    return 0;
+}

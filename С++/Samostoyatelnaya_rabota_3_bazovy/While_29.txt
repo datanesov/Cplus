@@ -1,0 +1,28 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+    double E, A_k1 = 1, A_k2 = 2, A_k3; // начальные значения A_1 и A_2
+    int k = 2; // начинаем с k = 2
+
+    cout << "Введите вещественное число E: ";
+    cin >> E;
+
+    while (abs(A_k2 - A_k1) >= E) // пока не выполняется условие |A_k - A_k-1| < E
+    {
+        A_k3 = (A_k1 + 2 * A_k2) / 3; // вычисляем A_k+1 через A_k и A_k-1
+        A_k1 = A_k2;
+        A_k2 = A_k3;
+        k++;
+    }
+
+    cout << "Номер элемента: " << k << endl;
+    cout << "A_k-1 = " << A_k1 << endl;
+    cout << "A_k = " << A_k2 << endl;
+
+    return 0;
+}
+

@@ -1,0 +1,18 @@
+#include <iostream>
+
+int main()
+{
+    int total_weight = 0;
+    int weight[10];
+
+    for (int i = 0; i < 10; i++)
+    {
+        std::cout << "Enter weight of item " << i + 1 << ": ";
+        std::cin >> weight[i];
+        total_weight += weight[i];
+    }
+
+    std::cout << "Total weight of items is: " << total_weight << std::endl;
+
+    return 0;
+}

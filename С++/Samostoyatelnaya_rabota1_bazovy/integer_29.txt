@@ -1,0 +1,13 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a, b, c;
+    cin >> a >> b >> c;
+    int count = (a/c) * (b/c);
+    int area = a*b - count*c*c;
+    cout << count << endl << area;
+    return 0;
+}

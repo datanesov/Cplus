@@ -1,0 +1,12 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main() {
+    float a, b, avg;
+    cout << "Enter two non-negative numbers: ";
+    cin >> a >> b;
+    avg = sqrt(a * b);
+    cout << "Geometric mean of the two numbers is: " << avg << endl;
+    return 0;
+}

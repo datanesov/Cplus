@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int L;
+    cout << "Enter distance in centimeters: ";
+    cin >> L;
+    int meters = L/100;
+    cout << "The distance in full meters is " << meters << endl;
+    return 0;
+}

@@ -1,0 +1,12 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    double x = 2.0, sum = 1 - 2.0/3 * x;
+    for(int i = 2; i <= 11; i++) {
+        sum += ((double)i+1)/((double)i+2) * pow(x, i);
+    }
+    cout << "Sum of the sequence: " << sum << endl;
+    return 0;
+}

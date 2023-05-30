@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float a, b, S, P;
+    cout << "Enter sides of rectangle: ";
+    cin >> a >> b;
+    S = a * b;
+    P = 2 * (a + b);
+    cout << "Area of the rectangle is: " << S << endl;
+    cout << "Perimeter of the rectangle is: " << P << endl;
+    return 0;
+}

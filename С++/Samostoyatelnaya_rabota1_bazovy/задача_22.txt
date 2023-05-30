@@ -1,0 +1,35 @@
+а)
+#include<iostream>
+using namespace std;
+int main(){
+    int n,sum=0,value;
+    float avg;
+    cin>>n; //ввод количества чисел
+    for(int i=0;i<n;i++){
+        cin>>value;
+        sum+=value; //считаем сумму чисел
+    }
+    avg=(float)sum/n; //считаем среднее арифметическое
+    cout<<avg;
+    return 0;
+}
+б)
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main(){
+    int n,value;
+    double prod;
+    cin>>n; //ввод количества чисел
+    for(int i=0;i<n;i++){
+        cin>>value;
+        if(value<0){ //если число отрицательное, то среднее геометрическое не определено
+            cout<<"Error: cannot compute geometric mean";
+            return 0;
+        }
+        prod*=value; //считаем произведение чисел
+    }
+    prod=pow(prod,1.0/n); //считаем среднее геометрическое
+    cout<<prod;
+    return 0;
+}

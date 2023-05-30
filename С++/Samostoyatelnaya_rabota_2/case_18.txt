@@ -1,0 +1,104 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int num,hun,ten,one;
+    cout<<"Enter a number between 100 to 999: ";
+    cin>>num;
+    if(num<100 || num>999)
+    {
+        cout<<"Invalid Number"<<endl;
+        return 0; //terminating the program
+    }
+    hun=num/100; //finding the hundred's digit
+    ten=(num/10)%10; //finding the ten's digit
+    one=num%10; //finding the one's digit
+    switch(hun)
+    {
+        case 1:
+            cout<<"One hundred ";
+            break;
+        case 2:
+            cout<<"Two hundred ";
+            break;
+        case 3:
+            cout<<"Three hundred ";
+            break;
+        case 4:
+            cout<<"Four hundred ";
+            break;
+        case 5:
+            cout<<"Five hundred ";
+            break;
+        case 6:
+            cout<<"Six hundred ";
+            break;
+        case 7:
+            cout<<"Seven hundred ";
+            break;
+        case 8:
+            cout<<"Eight hundred ";
+            break;
+        case 9:
+            cout<<"Nine hundred ";
+            break;
+    }
+    switch(ten)
+    {
+        case 2:
+            cout<<"twenty ";
+            break;
+        case 3:
+            cout<<"thirty ";
+            break;
+        case 4:
+            cout<<"forty ";
+            break;
+        case 5:
+            cout<<"fifty ";
+            break;
+        case 6:
+            cout<<"sixty ";
+            break;
+        case 7:
+            cout<<"seventy ";
+            break;
+        case 8:
+            cout<<"eighty ";
+            break;
+        case 9:
+            cout<<"ninety ";
+            break;
+    }
+    switch(one)
+    {
+        case 1:
+            cout<<"one"<<endl;
+            break;
+        case 2:
+            cout<<"two"<<endl;
+            break;
+        case 3:
+            cout<<"three"<<endl;
+            break;
+        case 4:
+            cout<<"four"<<endl;
+            break;
+        case 5:
+            cout<<"five"<<endl;
+            break;
+        case 6:
+            cout<<"six"<<endl;
+            break;
+        case 7:
+            cout<<"seven"<<endl;
+            break;
+        case 8:
+            cout<<"eight"<<endl;
+            break;
+        case 9:
+            cout<<"nine"<<endl;
+            break;
+    }
+    return 0;
+}

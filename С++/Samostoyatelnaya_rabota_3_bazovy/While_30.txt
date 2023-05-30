@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int A, B, C, count = 0;
+
+    cout << "Введите положительные числа A, B, C: ";
+    cin >> A >> B >> C;
+
+    while (A >= C && B >= C) // пока можно разместить квадраты
+    {
+        A -= C;
+        B -= C;
+        count++; // увеличиваем счетчик
+    }
+
+    cout << "Количество квадратов, размещенных на прямоугольнике: " << count << endl;
+
+    return 0;
+}

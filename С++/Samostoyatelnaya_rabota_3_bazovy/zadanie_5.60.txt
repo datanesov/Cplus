@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double jan[31], feb[28], mar[31], sum1 = 0, sum2 = 0, sum3 = 0;
+    cout << "Enter amount of rainfall in January (in mm):";
+    for(int i=0; i<31; i++) {
+        cin >> jan[i];
+        sum1 += jan[i];
+    }
+    cout << "Average rainfall in January: " << sum1/31 << " mm" << endl;
+    cout << "Enter amount of rainfall in February (in mm):";
+    for(int i=0; i<28; i++) {
+        cin >> feb[i];
+        sum2 += feb[i];
+    }
+    cout << "Average rainfall in February: " << sum2/28 << " mm" << endl;
+    cout << "Enter amount of rainfall in March (in mm):";
+    for(int i=0; i<31; i++) {
+        cin >> mar[i];
+        sum3 += mar[i];
+    }
+    cout << "Average rainfall in March: " << sum3/31 << " mm" << endl;
+    return 0;
+}
+

@@ -1,0 +1,12 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int num;
+    cout << "Enter a positive integer: ";
+    cin >> num;
+    bool result = (num % 2 == 0 && num >= 10 && num <= 99);
+    cout << boolalpha << result;
+    return 0;
+}

@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  for (int a = 2; a <= 17; ++a) {
+    int t = 4 * a;
+    float z = 3.5 * pow(t, 2) - 7 * t + 16;
+    cout << "a = " << a << ", z = " << z << endl;
+  }
+  return 0;
+}
+

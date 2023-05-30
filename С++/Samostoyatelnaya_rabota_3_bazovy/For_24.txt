@@ -1,0 +1,18 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    double X, result = 1;
+    int N;
+    cin >> X >> N;
+    double factorial = 1;
+    for(int i=1; i<=N; i++) {
+        factorial *= (2*i-1) * 2*i;
+        double term = pow(-1,i) * pow(X,2*i);
+        term /= factorial;
+        result += term;
+    }
+    cout << result << endl;
+    return 0;
+}

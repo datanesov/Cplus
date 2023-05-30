@@ -1,0 +1,14 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+float x1, x2, dist;
+    cout << "Enter the coordinates of two points on the number line: ";
+    cin >> x1 >> x2;
+    dist = abs(x2 - x1);
+    cout << "Distance between the two points: " << dist << endl;
+return 0;
+}
+

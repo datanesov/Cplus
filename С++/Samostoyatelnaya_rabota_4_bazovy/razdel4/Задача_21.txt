@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  int mat[5][5];
+  int arr[25], k=0;
+  for(int i=0;i<5;i++){
+      for(int j=0;j<5;j++){
+          cout<<"Enter element "<<i<<","<<j<<": ";
+          cin>>mat[i][j];
+          if(mat[i][j]>=1 && mat[i][j]<=10){
+              arr[k++]=mat[i][j];
+          }
+      }
+  }
+  int prod=1;
+  for(int i=0;i<k;i++){
+      prod*=arr[i];
+  }
+  cout<<"Product of elements between 1-10: "<<prod<<endl;
+  return 0;
+}
+

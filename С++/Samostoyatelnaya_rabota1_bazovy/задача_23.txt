@@ -1,0 +1,9 @@
+#include<iostream>
+using namespace std;
+int main(){
+    double mass,volume,density;
+    cin>>mass>>volume; //ввод массы и объема тела
+    density=mass/volume; //считаем плотность
+    cout<<density;
+    return 0;
+}

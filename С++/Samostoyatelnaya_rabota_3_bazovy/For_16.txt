@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double a;
+    int n;
+    cout<<"Input A and N: ";
+    cin>>a>>n;
+    double result=1.0;
+    for(int i=1;i<=n;i++){
+        result*=a;
+        cout<<a<<"^"<<i<<" is "<<result<<endl;
+    }
+    return 0;
+}

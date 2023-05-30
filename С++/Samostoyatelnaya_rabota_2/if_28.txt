@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int year, days;
+    cout << "Enter a year: ";
+    cin >> year;
+    if (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0))
+        days = 366;
+    else
+        days = 365;
+    cout << "Number of days in the year: " << days << endl;
+    return 0;
+}
+

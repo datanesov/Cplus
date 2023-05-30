@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num1, num2, num3;
+    cout << "Enter three integers, one is different from the other two: ";
+    cin >> num1 >> num2 >> num3;
+    if (num1 == num2) {
+        cout << "Result: 3" << endl;
+    } else if (num1 == num3) {
+        cout << "Result: 2" << endl;
+    } else {
+        cout << "Result: 1" << endl;
+    }
+    return 0;
+}

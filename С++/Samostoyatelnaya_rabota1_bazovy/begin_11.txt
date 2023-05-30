@@ -1,0 +1,17 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+ float a, b;
+  cin >> a >> b;
+  float sum = abs(a) + abs(b);
+  float diff = abs(a) - abs(b);
+  float mult = abs(a) * abs(b);
+  float div = abs(a) / abs(b);
+  cout << "Sum: " << sum << endl;
+  cout << "Difference: " << diff << endl;
+  cout << "Product: " << mult << endl;
+  cout << "Quotient: " << div << endl;
+    return 0;
+}

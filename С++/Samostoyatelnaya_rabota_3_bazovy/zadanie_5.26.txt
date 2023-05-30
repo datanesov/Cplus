@@ -1,0 +1,7 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "4.4\n4.6\n4.8\n6.4\n";
+    return 0;
+}

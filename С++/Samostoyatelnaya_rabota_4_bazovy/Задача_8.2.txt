@@ -1,0 +1,53 @@
+а)
+#include <iostream>
+using namespace std;
+
+int main() {
+    const int ROWS = 5;
+    const int COLS = 5;
+    int arr[ROWS][COLS];
+
+    // заполнение массива
+    for (int i = 0; i < ROWS; i++) {
+        for (int j = 0; j <= i; j++) {
+            arr[i][j] = 5;
+        }
+    }
+
+    // вывод массива на экран
+    for (int i = 0; i < ROWS; i++) {
+        for (int j = 0; j <= i; j++) {
+            cout << arr[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+
+б)
+#include <iostream>
+using namespace std;
+
+int main() {
+    const int ROWS = 5;
+    int arr[ROWS][ROWS];
+
+    // заполнение массива
+    for (int i = 0; i < ROWS; i++) {
+        for (int j = i; j < ROWS; j++) {
+            arr[i][j] = 1;
+        }
+    }
+
+    // вывод массива на экран
+    for (int i = 0; i < ROWS; i++) {
+        for (int j = 0; j < ROWS-i; j++) {
+            cout << arr[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+

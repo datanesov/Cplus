@@ -1,0 +1,95 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    char C;
+    int N1, N2;
+    cin >> C >> N1 >> N2;
+    switch (C) {
+        case 'С':
+            if (N1 == 1) {
+                if (N2 == 1) cout << "Ю\n";
+                else if (N2 == -1) cout << "З\n";
+                else cout << "С\n";
+            }
+            else if (N1 == -1) {
+                if (N2 == 1) cout << "В\n";
+                else if (N2 == -1) cout << "С\n";
+                else cout << "З\n";
+            }
+            else if (N1 == 2) {
+                if (N2 == 2) cout << "Ю\n";
+                else cout << "В\n";
+            }
+            else {
+                if (N2 == 1) cout << "С\n";
+                else if (N2 == -1) cout << "Ю\n";
+                else cout << "З\n";
+            }
+            break;
+        case 'З':
+            if (N1 == 1) {
+                if (N2 == 1) cout << "В\n";
+                else if (N2 == -1) cout << "С\n";
+                else cout << "З\n";
+            }
+            else if (N1 == -1) {
+                if (N2 == 1) cout << "Ю\n";
+                else if (N2 == -1) cout << "В\n";
+                else cout << "С\n";
+            }
+            else if (N1 == 2) {
+                if (N2 == 2) cout << "З\n";
+                else cout << "Ю\n";
+            }
+            else {
+                if (N2 == 1) cout << "С\n";
+                else if (N2 == -1) cout << "Ю\n";
+                else cout << "В\n";
+            }
+            break;
+        case 'Ю':
+            if (N1 == 1) {
+                if (N2 == 1) cout << "З\n";
+                else if (N2 == -1) cout << "В\n";
+                else cout << "Ю\n";
+            }
+            else if (N1 == -1) {
+                if (N2 == 1) cout << "С\n";
+                else if (N2 == -1) cout << "З\n";
+                else cout << "В\n";
+            }
+            else if (N1 == 2) {
+                if (N2 == 2) cout << "Ю\n";
+                else cout << "С\n";
+            }
+            else {
+                if (N2 == 1) cout << "В\n";
+                else if (N2 == -1) cout << "С\n";
+                else cout << "З\n";
+            }
+            break;
+        case 'В':
+            if (N1 == 1) {
+                if (N2 == 1) cout << "С\n";
+                else if (N2 == -1) cout << "Ю\n";
+                else cout << "В\n";
+            }
+            else if (N1 == -1) {
+                if (N2 == 1) cout << "З\n";
+                else if (N2 == -1) cout << "С\n";
+                else cout << "Ю\n";
+            }
+            else if (N1 == 2) {
+                if (N2 == 2) cout << "Ю\n";
+                else cout << "З\n";
+            }
+            else {
+                if (N2 == 1) cout << "В\n";
+                else if (N2 == -1) cout << "Ю\n";
+                else cout << "С\n";
+            }
+            break;
+    }
+    return 0;
+}

@@ -1,0 +1,25 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    double a, m, u;
+    const double g = 9.81; // ускорение свободного падения
+
+    cout << "Введите угол наклона плоскости: ";
+    cin >> a;
+
+    cout << "Введите ускорение тела: ";
+    cin >> m;
+
+    double Ft = m * g * cos(a); // сила трения
+    double F = m * g * sin(a) - Ft; // равнодействующая сила
+
+    u = (F >= 0) ? Ft / (m * g * cos(a)) : 0; // коэффициент трения (0, если тело неподвижно)
+
+    cout << "Коэффициент трения: " << u << endl;
+
+    return 0;
+}

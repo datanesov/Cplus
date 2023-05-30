@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double a, b;
+    cout << "Enter two decimal numbers: ";
+    cin >> a >> b;
+    if (a > b) {
+        double temp = a;
+        a = b;
+        b = temp;
+    }
+    cout << "New values - A: " << a << ", B: " << b << endl;
+    return 0;
+}
+

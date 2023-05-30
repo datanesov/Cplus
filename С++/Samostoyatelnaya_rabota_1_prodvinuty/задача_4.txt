@@ -1,0 +1,118 @@
+ChatGPT (беседа № 24):
+
+Задача 1:
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    double I, T, a;
+    const double g = 9.81; // ускорение свободного падения
+
+    cout << "Введите начальную скорость: ";
+    cin >> I;
+
+    cout << "Введите время полета: ";
+    cin >> T;
+
+    a = asin(g * T / (2 * I)); //cos(a) = g * T / (2 * I)
+
+    cout << "Угол a: " << a * 180 / M_PI << " градусов" << endl;
+
+    return 0;
+}
+
+Задача 2:
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    double V, a, L;
+    const double g = 9.81; // ускорение свободного падения
+
+    cout << "Введите начальную скорость: ";
+    cin >> V;
+
+    cout << "Введите угол a: ";
+    cin >> a;
+
+    L = pow(V, 2) * sin(2 * a) / g;
+
+    cout << "Дальность полета: " << L << endl;
+
+    return 0;
+}
+
+Задача 3:
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    double H, L, V, a;
+    const double g = 9.81; // ускорение свободного падения
+
+    cout << "Введите максимальную высоту подъема: ";
+    cin >> H;
+
+    cout << "Введите дальность полета: ";
+    cin >> L;
+
+    a = atan(4 * H / L);
+    V = sqrt(g * L / pow(sin(a), 2));
+
+    cout << "Начальная скорость: " << V << endl;
+    cout << "Угол a: " << a * 180 / M_PI << " градусов" << endl;
+
+    return 0;
+}
+
+Задача 4:
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    double H, V, a, t;
+    const double g = 9.81; // ускорение свободного падения
+
+    cout << "Введите высоту обрыва: ";
+    cin >> H;
+
+    cout << "Введите начальную скорость: ";
+    cin >> V;
+
+    cout << "Введите угол a: ";
+    cin >> a;
+
+    double T = (V * sin(a) / g) * (1 + sqrt(1 + (2 * g * H) / pow(V * sin(a), 2))); // время полета камня
+
+    cout << "Введите время t (0 <= t <= " << T << "): ";
+    cin >> t;
+
+    double x = V * t * cos(a); // координата камня по горизонтали
+    double y = H + V * t * sin(a) - g * pow(t, 2) / 2; // координата камня по вертикали
+    double u = x + y / tan(a); // расстояние до края обрыва
+
+    cout << "Координата камня по горизонтали: " << x << endl;
+    cout << "Координата камня по вертикали: " << y << endl;
+    cout << "Расстояние до края обрыва: " << u << endl;
+
+    // проверка на падение на дно обрыва
+    (y <= 0) ? cout << "Камень упал на дно обрыва" << endl : cout << endl;
+
+    return 0;
+}

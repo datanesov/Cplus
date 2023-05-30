@@ -1,0 +1,22 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    cin >> n;
+    
+    double a = 2.0;
+    cout << a << " ";
+    for (int i = 1; i < n; i++)
+    {
+        double ak = a + 1.0 / a;
+        cout << ak << " ";
+        a = ak;
+    }
+    cout << endl;
+    
+    return 0;
+}

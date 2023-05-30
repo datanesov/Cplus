@@ -1,0 +1,20 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    double a, b, c;
+    cout << "Введите коэффициенты A, B, C (через пробел): ";
+    cin >> a >> b >> c;
+
+    double D = b*b - 4*a*c; // дискриминант
+
+    double x1 = (-b - sqrt(D))/(2*a); // первый корень
+    double x2 = (-b + sqrt(D))/(2*a); // второй корень
+
+    cout << "Корни уравнения: " << x1 << ", " << x2 << endl;
+
+    return 0;
+}
+

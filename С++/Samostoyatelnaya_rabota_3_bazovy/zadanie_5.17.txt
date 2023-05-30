@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  for (int x = 4; x <= 28; ++x) {
+    int t = x + 2;
+    float y = 2 * pow(t, 2) + 5.5 * t - 2;
+    cout << "x = " << x << ", y = " << y << endl;
+  }
+  return 0;
+}

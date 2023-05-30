@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Enter a number: ";
+    cin >> n;
+    double sum = 0, sign = 1;
+    for(int i = 1; i <= n; i++) {
+        sum += sign * (double)1/i;
+        sign = -sign;
+    }
+    cout << "Sum of the sequence: " << sum << endl;
+    return 0;
+}

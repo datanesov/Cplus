@@ -1,0 +1,18 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    double arr[15] = {-2.1, 3.7, -1.5, 0.8, -4.2, 2.3, 5.6, -6.4, 0.9, -3.2, 0.4, 2.1, -5.7, 1.6, -1.9};
+    double prod_pos = 1, prod_neg = 1;
+    for(int i = 0; i < 15; i++) {
+        if(arr[i] > 0) {
+            prod_pos *= arr[i];
+        } else if(arr[i] < 0) {
+            prod_neg *= abs(arr[i]);
+        }
+    }
+    double diff = prod_pos - prod_neg;
+    cout << "Difference between product of positive elements and product of absolute values of negative elements: " << diff << endl;
+    return 0;
+}

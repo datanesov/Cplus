@@ -1,0 +1,10 @@
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    double G = 6.672 * pow(10, -11); // гравитационная постоянная
+

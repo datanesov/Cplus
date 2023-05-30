@@ -1,0 +1,15 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+float AC_prod, BC_prod;
+    cout << "Enter the coordinates of three points on the number line, where C is between A and B: ";
+    cin >> a >> b >> c;
+    AC_prod = abs(c - a) * abs(c - a);
+    BC_prod = abs(c - b) * abs(c - b);
+    cout << "Product of lengths AC and BC: " << AC_prod * BC_prod << endl;
+
+    return 0;
+}

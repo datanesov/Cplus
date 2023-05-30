@@ -1,0 +1,11 @@
+#include <iostream>
+#include <cmath>
+
+int main() {
+    double N, T, t, dM;
+    std::cin >> N >> T >> t;
+    dM = N * (1 - std::exp(-t * std::log(2) / T));
+    std::cout << "Absolute: " << dM << std::endl;
+    std::cout << "Percentage: " << dM / N * 100 << "%" << std::endl;
+    return 0;
+}

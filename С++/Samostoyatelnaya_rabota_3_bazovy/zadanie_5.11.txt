@@ -1,0 +1,13 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+  const double R = 6350;
+  for (int h = 1; h <= 10000; h += 1000) {
+    double d = 2 * sqrt(R * (R + h));
+    cout << "Высота: " << h << " м, расстояние до горизонта: " << d << " м" << endl;
+  }
+  return 0;
+}
+

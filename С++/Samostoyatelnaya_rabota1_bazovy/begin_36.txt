@@ -1,0 +1,18 @@
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    float V1, V2, S, T, distance;
+    cout << "Enter the speed of first car (km/h): ";
+    cin >> V1;
+    cout << "Enter the speed of second car (km/h): ";
+    cin >> V2;
+    cout << "Enter the distance between them (km): ";
+    cin >> S;
+    cout << "Enter the time for which distance is to be calculated (hours): ";
+    cin >> T;
+    distance = S + (V1 + V2) * T;
+    cout << "Distance between the cars after " << T <<" hours is: " << distance << " km" << endl;
+    return 0;
+}

@@ -1,0 +1,24 @@
+#include <iostream>
+
+int main()
+{
+    int n;
+    int total_weight = 0;
+
+    std::cout << "Enter value of n: ";
+    std::cin >> n;
+    float weights[n];
+
+    for (int i = 0; i < n; i++)
+    {
+        std::cout << "Enter weight of item " << i + 1 << ": ";
+        std::cin >> weights[i];
+        total_weight += weights[i];
+    }
+
+    float average_weight = (float)total_weight / n;
+
+    std::cout << "Average weight of items is: " << average_weight << std::endl;
+
+    return 0;
+}

@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+    int n;
+    bool hasOdd = false;
+    cin >> n;
+    while(n > 0) {
+        if(n % 2 == 1) {
+            hasOdd = true;
+            break;
+        }
+        n /= 10;
+    }
+    if(hasOdd) {
+        cout << "True";
+    } else {
+        cout << "False";
+    }
+    return 0;
+}
+

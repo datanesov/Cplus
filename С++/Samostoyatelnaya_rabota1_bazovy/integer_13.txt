@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int num, first_digit, new_num;
+    cin >> num;
+    first_digit = num / 100;
+    new_num = (num % 100) * 10 + first_digit;
+    cout << new_num << endl;
+    return 0;
+}

@@ -1,0 +1,13 @@
+
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main(){
+    int a,b;
+    double avg,geom;
+    cin>>a>>b; //ввод двух чисел
+    avg=(double)(abs(a)+abs(b))/2; //вычисляем среднее арифметическое модулей
+    geom=sqrt(abs(a)*abs(b)); //вычисляем среднее геометрическое модулей
+    cout<<avg<<" "<<geom;
+    return 0;
+}

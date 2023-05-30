@@ -1,0 +1,13 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    float a, b, alpha;
+    cout << "Введите основания трапеции и угол при большем основании: ";
+    cin >> a >> b >> alpha;
+    float h = (b-a)*tan(alpha);
+    float s = (a+b)*h/2;
+    cout << "Площадь трапеции: " << s << endl;
+    return 0;
+}

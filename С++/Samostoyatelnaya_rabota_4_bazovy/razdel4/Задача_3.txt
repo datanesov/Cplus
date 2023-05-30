@@ -1,0 +1,47 @@
+
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main()
+{
+    vector<vector<int>> matrix = vector<vector<int>>(4, vector<int>(4)); //создание двумерного массива
+
+    int k=0, p=0, m=4, n=4, i, j;
+    while(k<m && p<n)
+    {
+        //заполнение верхней строки, справа от начала
+        for(i = k, j = p; j < n; j++) 
+            matrix[i][j] = ++p;
+        j--;
+        k++;
+
+        //заполнение правого столбца, ниже начала
+        for(i = k; i < m; i++) 
+            matrix[i][j] = ++p;
+        i--;
+        n--;
+
+        //заполнение нижней строки, слева от начала
+        for(j = n-1; j >= p-k; j--) 
+            matrix[i][j] = ++p;
+        j++;
+        m--;
+
+        //заполнение левого столбца, выше начала
+        for(i = m-1; i >= k; i--) 
+            matrix[i][j] = ++p;
+        i++;
+    }
+
+    for(int i = 0; i < matrix.size(); i++)
+    {
+        for(int j = 0; j < matrix.size(); j++)
+            cout << matrix[i][j] << " ";
+        cout << endl;
+    }
+
+    return 0;
+}
+

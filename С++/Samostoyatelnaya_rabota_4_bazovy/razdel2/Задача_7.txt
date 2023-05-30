@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    const int size = 15; // размер массива
+    float arr[size];
+    float first; // значение первого элемента
+    int count = 0; // количество элементов, больших первого элемента
+
+    // ввод элементов массива
+    for (int i = 0; i < size; i++) {
+        cout << "Enter value " << i + 1 << ": ";
+        cin >> arr[i];
+        if (i == 0) { // первый элемент
+            first = arr[i];
+        } else {
+            if (arr[i] > first) { // если элемент больше первого элемента
+                count++; // увеличиваем счётчик
+            }
+        }
+    }
+
+    cout << "Number of elements greater than the first element: " << count << endl;
+
+    return 0;
+}

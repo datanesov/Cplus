@@ -1,0 +1,28 @@
+
+#include <iostream>
+using namespace std;
+
+int main() {
+  int mat[5][5];
+  for(int i=0;i<5;i++){
+      for(int j=0;j<5;j++){
+          cout<<"Enter element "<<i<<","<<j<<": ";
+          cin>>mat[i][j];
+      }
+  }
+  int min_count=6, min_col=0;
+  for(int j=0;j<5;j++){
+      int count=0;
+      for(int i=0;i<5;i++){
+          if(mat[i][j]% (i+j) == 0){
+              count++;
+          }
+      }
+      if(count<min_count){
+          min_count=count;
+          min_col=j;
+      }
+  }
+  cout<<"Column "<<min_col<<" has minimum elements that are divisible by the sum of their indices"<<endl;
+  return 0;
+}

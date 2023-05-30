@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Enter n: ";
+    cin >> n;
+    double sum = 0, fact = 1;
+    for (int i = 0; i <= n; i++) {
+        if (i > 0) {
+            fact *= i;
+        }
+        sum += 1.0 / fact;
+    }
+    cout << "1 + 1/1! + 1/2! + ... + 1/n! = " << sum;
+    return 0;
+}

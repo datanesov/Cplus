@@ -1,0 +1,24 @@
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    double a, b;
+    cin >> n >> a >> b;
+    
+    double h = (b - a) / n;
+    cout << "H = " << h << endl;
+    
+    for (int i = 0; i <= n; i++)
+    {
+        double x = a + i * h;
+        double f = 1 - sin(x);
+        cout << "F(" << x << ") = " << f << endl;
+    }
+    
+    return 0;
+}

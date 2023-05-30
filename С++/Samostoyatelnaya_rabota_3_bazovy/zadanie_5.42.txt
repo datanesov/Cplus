@@ -1,0 +1,18 @@
+#include <iostream>
+
+int main()
+{
+    int sum = 0;
+    int marks[4];
+
+    for (int i = 0; i < 4; i++)
+    {
+        std::cout << "Enter marks for exam " << i + 1 << ": ";
+        std::cin >> marks[i];
+        sum += marks[i];
+    }
+
+    std::cout << "Total marks obtained is: " << sum << std::endl;
+
+    return 0;
+}

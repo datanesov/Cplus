@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    const int size = 15; // размер массива
+    int arr[size];
+    float sum = 0; // сумма элементов
+    float avg; // среднее арифметическое
+    int new_arr[size]; // новый массив с разностью элементов и среднего арифметического
+
+    // ввод элементов массива и подсчёт суммы
+    for (int i = 0; i < size; i++) {
+        cout << "Enter value " << i + 1 << ": ";
+        cin >> arr[i];
+        sum += arr[i];
+    }
+
+    avg = sum / size; // вычисление среднего арифметического
+
+    // заполнение нового массива элементами, равными разности элементов исходного массива и среднего арифметического
+    for (int i = 0; i < size; i++) {
+        new_arr[i] = arr[i] - avg;
+        cout << new_arr[i] << " ";
+    }
+
+    return 0;
+}

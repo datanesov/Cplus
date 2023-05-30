@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num1, num2, num3, num4;
+    cout << "Enter four integers, one is different from the other three: ";
+    cin >> num1 >> num2 >> num3 >> num4;
+    if (num1 == num2) {
+        if (num2 == num3) {
+            cout << "Result: 4" << endl;
+        } else {
+            cout << "Result: 3" << endl;
+        }
+    } else if (num1 == num3) {
+        cout << "Result: 2" << endl;
+    } else {
+        cout << "Result: 1" << endl;
+    }
+    return 0;
+}
+

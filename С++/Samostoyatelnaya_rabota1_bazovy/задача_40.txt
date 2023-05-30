@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a = 5, b = 10, c = 15;
+    cout << "До обмена: a = " << a << ", b = " << b << ", c = " << c << endl;
+    int temp = c;
+    c = b;
+    b = a;
+    a = temp;
+    cout << "После первого обмена: a = " << a << ", b = " << b << ", c = " << c << endl;
+    b = a + b + c;
+    a = b - a - c;
+    c = b - a - b;
+    cout << "После второго обмена: a = " << a << ", b = " << b << ", c = " << c << endl;
+    return 0;
+}
+

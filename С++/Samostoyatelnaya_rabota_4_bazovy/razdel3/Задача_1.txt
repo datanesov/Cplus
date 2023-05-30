@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    // создаем массив 3x4 и заполняем случайными числами
+    int arr[3][4] = { {4, 2, 7, 1}, {6, 9, 3, 8}, {5, 0, 2, 1} };
+    int lastRow[4];
+    for (int i = 0; i < 4; i++) {
+        lastRow[i] = arr[2][i];
+    }
+    // сортируем последнюю строку по возрастанию
+    for(int i = 0; i < 4; i++){
+        for(int j = i + 1; j < 4; j++){
+            if(lastRow[i] > lastRow[j]){
+                int temp = lastRow[i];
+                lastRow[i] = lastRow[j];
+                lastRow[j] = temp;
+            }
+        }
+    }
+    // выводим отсортированный массив
+    for(int i = 0; i < 3; i++){
+        for(int j = 0; j < 4; j++){
+            if(i == 2){
+                cout << lastRow[j] << " ";
+            } else {
+                cout << arr[i][j] << " ";
+            }
+        }
+        cout << endl;
+    }
+    return 0;
+}
+

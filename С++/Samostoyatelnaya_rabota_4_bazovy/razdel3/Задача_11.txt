@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, m, even_num = 0, odd_num = 0;
+    cout << "Enter the size of the array: ";
+    cin >> n >> m;
+    int arr[n][m];
+    cout << "Enter the elements of the array: " << endl;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            cin >> arr[i][j];
+            if (arr[i][j] % 2 == 0) {
+                even_num++;
+            } else {
+                odd_num++;
+            }
+        }
+    }
+    cout << "Number of even numbers in the array: " << even_num << endl;
+    cout << "Number of odd numbers in the array: " << odd_num << endl;
+    return 0;
+}
+

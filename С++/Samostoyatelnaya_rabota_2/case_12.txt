@@ -1,0 +1,175 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, x;
+    cin >> n >> x;
+    switch (n) {
+        case 1:
+            cout << "Диаметр: " << 2 * x << endl;
+            cout << "Длина: " << 2 * 3.14 * x << endl;
+            cout << "Площадь: " << 3.14 * x * x << endl;
+            break;
+        case 2:
+            cout << "Радиус: " << x / 2.0 << endl;
+            cout << "Длина: " << 3.14 * x << endl;
+            cout << "Площадь: " << 3.14 * x * x / 4.0 << endl;
+            break;
+        case 3:
+            cout << "Радиус: " << x << endl;
+            cout << "Диаметр: " << 2 * x << endl;
+            cout << "Площадь: " << 3.14 * x * x / 2.0 << endl;
+            break;
+        case 4:
+            cout << "Радиус: " << sqrt(x * 4 / 3.14) << endl;
+            cout << "Диаметр: " << sqrt(x * 4 / 3.14) * 2 << endl;
+            cout << "Длина: " << sqrt(x * 4 / 3.14) * 2 * 3.14 << endl;
+            break;
+    }
+    return 0;
+}
+```
+
+Пример программы для решения задачи Сазе13:
+```
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    int n, x;
+    cin >> n >> x;
+    switch (n) {
+        case 1:
+cout << "Гипотенуза: " << x * sqrt(2) << endl;
+            cout << "Высота опущенная на гипотенузу: " << x << endl;
+            cout << "Площадь: " << x * x / 2.0 << endl;
+            break;
+        case 2:
+            cout << "Катет: " << x / sqrt(2) << endl;
+            cout << "Высота опущенная на гипотенузу: " << x / 2.0 << endl;
+            cout << "Площадь: " << x * x / 4.0 << endl;
+            break;
+        case 3:
+            cout << "Катет: " << x / sqrt(2) << endl;
+            cout << "Гипотенуза: " << x << endl;
+            cout << "Площадь: " << x * x / 2.0 << endl;
+            break;
+        case 4:
+            cout << "Катет: " << x / sqrt(2) << endl;
+            cout << "Гипотенуза: " << x << endl;
+            cout << "Высота опущенная на гипотенузу: " << x / 2.0 << endl;
+            break;
+    }
+    return 0;
+}
+
+```
+
+Пример программы для решения задачи Сазе14:
+```
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    int n, x;
+    cin >> n >> x;
+    switch (n) {
+        case 1:
+            cout << "Радиус вписанной окружности: " << x / 3.0 << endl;
+            cout << "Радиус описанной окружности: " << 2 * x / 3.0 << endl;
+            cout << "Площадь: " << x * x * sqrt(3) / 4.0 << endl;
+            break;
+        case 2:
+            cout << "Сторона: " << cbrt(x * 6) << endl;
+            cout << "Радиус описанной окружности: " << cbrt(x * 2) << endl;
+            cout << "Площадь: " << x * sqrt(3) / 4.0 << endl;
+            break;
+        case 3:
+            cout << "Сторона: " << x * sqrt(3) / 3.0 << endl;
+            cout << "Радиус вписанной окружности: " << x * sqrt(3) / 6.0 << endl;
+            cout << "Площадь: " << x * x * sqrt(3) / 4.0 << endl;
+            break;
+        case 4:
+            cout << "Сторона: " << sqrt(x * 4 / sqrt(3)) << endl;
+            cout << "Радиус вписанной окружности: " << sqrt(x / sqrt(3)) << endl;
+            cout << "Радиус описанной окружности: " << sqrt(x * 2 / sqrt(3)) << endl;
+            break;
+    }
+    return 0;
+}
+```
+
+Пример программы для решения задачи Case15:
+```
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, m;
+    cin >> n >> m;
+    string suit, rank;
+    switch (m) {
+        case 1:
+            suit = "пик";
+            break;
+        case 2:
+            suit = "треф";
+            break;
+        case 3:
+            suit = "бубен";
+            break;
+        case 4:
+            suit = "червей";
+            break;
+    }
+    switch (n) {
+        case 6:
+            rank = "шестерка";
+            break;
+        case 7:
+            rank = "семерка";
+            break;
+        case 8:
+            rank = "восьмерка";
+            break;
+        case 9:
+            rank = "девятка";
+            break;
+        case 10:
+            rank = "десятка";
+            break;
+        case 11:
+            rank = "валет";
+            break;
+        case 12:
+            rank = "дама";
+            break;
+        case 13:
+            rank = "король";
+            break;
+        case 14:
+            rank = "туз";
+            break;
+    }
+    cout << rank << " " << suit << endl;
+    return 0;
+}
+```
+
+Пример программы для решения задачи Case16:
+```
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+    string years;
+    if (n < 20)
+        years = to_string(n) + " лет";
+    else if (n < 30) {
+        if (n % 10 == 0)
+            years
+

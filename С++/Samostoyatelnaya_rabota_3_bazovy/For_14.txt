@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n,sum=0;
+    cout<<"Input N: ";
+    cin>>n;
+    for(int i=1;i<=n;i++){
+        sum+=2*i-1;
+        cout<<"Sum of odd integers from 1 to "<<i<<" is "<<sum<<endl;
+    }
+    cout<<"Square of "<<n<<" is "<<sum<<endl;
+    return 0;
+}

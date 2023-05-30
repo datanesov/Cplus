@@ -1,0 +1,19 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    double x, result;
+    cout << "Enter a real number x: ";
+    cin >> x;
+    if (x == 0)
+        result = -x;
+    else if (x > 0 && x < 2)
+        result = pow(x, 2);
+    else
+        result = 4;
+    cout << "f(x) = " << result << endl;
+    return 0;
+}

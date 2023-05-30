@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    // a
+    int sum = 0;
+    for(int i = 100; i <= 500; i++) {
+        sum += i;
+    }
+    cout << "Sum from 100 to 500: " << sum << endl;
+  
+    // b
+    cout << "Enter a number: ";
+    int a, sum_a = 0;
+    cin >> a;
+    for(int i = a; i <= 300; i++) {
+        sum_a += i;
+    }
+    cout << "Sum from " << a << " to 300: " << sum_a << endl;
+  
+    // c
+    cout << "Enter a number: ";
+    int b, sum_b = 0;
+    cin >> b;
+    for(int i = -10; i <= b; i++) {
+        sum_b += i;
+    }
+    cout << "Sum from -10 to " << b << ": " << sum_b << endl;
+  
+    // d
+    cout << "Enter two numbers: ";
+    int c, d, sum_cd = 0;
+    cin >> c >> d;
+    for(int i = c; i <= d; i++) {
+        sum_cd += i;
+    }
+    cout << "Sum from " << c << " to " << d << ": " << sum_cd << endl;
+  
+    return 0;
+}
+

@@ -1,0 +1,73 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int tasks;
+    cout<<"Enter the number of tasks between 10 to 40: ";
+    cin>>tasks;
+    int rem=tasks%10; //finding the remainder
+    switch(tasks)
+    {
+        case 10:
+            cout<<"Ten study tasks"<<endl;
+            break;
+        case 20:
+            cout<<"Twenty study tasks"<<endl;
+            break;
+        case 30:
+            cout<<"Thirty study tasks"<<endl;
+            break;
+        case 40:
+            cout<<"Forty study tasks"<<endl;
+            break;
+        default:
+            if(tasks<10 || tasks>40)
+                cout<<"Invalid number of tasks"<<endl;
+            else
+            {
+                switch(tasks/10) //finding the ten's digit
+                {
+                    case 2:
+                        cout<<"Twenty ";
+                        break;
+                    case 3:
+                        cout<<"Thirty ";
+                        break;
+                    case 4:
+                        cout<<"Forty ";
+                        break;
+                }
+                switch(rem) //finding the one's digit
+                {
+                    case 1:
+                        cout<<"study task"<<endl;
+                        break;
+                    case 2:
+                        cout<<"study tasks"<<endl;
+                        break;
+                    case 3:
+                        cout<<"study tasks"<<endl;
+                        break;
+                    case 4:
+                        cout<<"study tasks"<<endl;
+                        break;
+                    case 5:
+                        cout<<"study tasks"<<endl;
+break;
+                    case 6:
+                        cout<<"study tasks"<<endl;
+                        break;
+                    case 7:
+                        cout<<"study tasks"<<endl;
+                        break;
+                    case 8:
+                        cout<<"study tasks"<<endl;
+                        break;
+                    case 9:
+                        cout<<"study tasks"<<endl;
+                        break;
+                }
+            }
+    }
+    return 0;
+}

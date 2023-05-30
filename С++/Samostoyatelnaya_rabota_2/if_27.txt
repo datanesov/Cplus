@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    double x;
+    int result;
+    cout << "Enter a real number x: ";
+    cin >> x;
+    if (x < 0)
+        result = 0;
+    else if (int(x) % 2 == 0)
+        result = (int(x) / 2) % 2 == 0 ? 1 : -1;
+    else
+        result = -1;
+    cout << "f(x) = " << result << endl;
+    return 0;
+}
+

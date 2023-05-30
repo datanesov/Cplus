@@ -1,0 +1,17 @@
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    double X, result = 1;
+    int N;
+    cin >> X >> N;
+    double factorial = 1;
+    for(int i=1; i<=N; i++) {
+        factorial *= i;
+        result += pow(X,i) / factorial;
+    }
+    cout << result << endl;
+    return 0;
+}

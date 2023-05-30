@@ -1,0 +1,22 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    double V, a, L;
+    const double g = 9.81; // ускорение свободного падения
+
+    cout << "Введите начальную скорость: ";
+    cin >> V;
+
+    cout << "Введите угол a: ";
+    cin >> a;
+
+    L = pow(V, 2) * sin(2 * a) / g;
+
+    cout << "Дальность полета: " << L << endl;
+
+    return 0;
+}

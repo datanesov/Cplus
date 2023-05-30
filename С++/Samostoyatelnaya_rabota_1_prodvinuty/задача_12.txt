@@ -1,0 +1,48 @@
+double M = 5.96 * pow(10, 24); // масса Земли
+    double R = 6.37 * pow(10, 6); // радиус Земли
+    double h; // высота над Землей
+    double g; // ускорение свободного падения
+
+    cout << "Введите высоту над Землей: ";
+    cin >> h;
+
+    g = G * M / pow(R + h, 2);
+
+    cout << "Ускорение свободного падения: " << g << endl;
+
+    return 0;
+}
+
+Задача 12:
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    double m, a, F0, u;
+    const double g = 9.81; // ускорение свободного падения
+
+    cout << "Введите массу тела: ";
+    cin >> m;
+
+    cout << "Введите угол a: ";
+    cin >> a;
+
+    cout << "Введите приложенную силу F_0: ";
+    cin >> F0;
+
+    cout << "Введите коэффициент трения: ";
+    cin >> u;
+
+    double Ft = u * m * g * cos(a); // сила трения
+    double F = F0 * cos(a) - Ft; // равнодействующая сила
+
+    double acceleration = (F >= 0) ? F / m : 0; // ускорение тела (0, если тело неподвижно)
+
+    cout << "Ускорение тела: " << acceleration << endl;
+
+    return 0;
+}

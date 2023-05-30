@@ -1,0 +1,29 @@
+#include <iostream>
+#include <vector>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    vector<vector<int>> A = { {1, -2, 3},
+                              {4, 5, -6},
+                              {-7, 8, 9} };
+
+    vector<int> C;
+    int B = 5; //заданное число
+    for(int i = 0; i < A.size(); i++)
+    {
+        for(int j = 0; j < A[0].size(); j++)
+        {
+            if(abs(A[i][j]) > B) //проверка на превышение по абсолютной величине
+                C.push_back(A[i][j]);
+        }
+    }
+
+    for(int i = 0; i < C.size(); i++)
+        cout << C[i] << " ";
+    cout << endl;
+
+    return 0;
+}

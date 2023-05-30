@@ -1,0 +1,31 @@
+#include <iostream>
+
+const int SIZE = 19;
+
+int main() {
+    int arr[SIZE];
+    int sum = 0;
+    bool negative_found = false;
+
+    std::cout << "Enter " << SIZE << " integers:\n";
+
+    for (int i = 0; i < SIZE; ++i) {
+        std::cin >> arr[i];
+        if (!negative_found && arr[i] < 0) {
+            negative_found = true;
+        }
+        if (!negative_found) {
+            sum += arr[i];
+        }
+    }
+
+    if (negative_found) {
+        std::cout << "Sum of elements before first negative element: " << sum << std::endl;
+    }
+    else {
+        std::cout << "No negative elements found in the array." << std::endl;
+    }
+
+    return 0;
+}
+

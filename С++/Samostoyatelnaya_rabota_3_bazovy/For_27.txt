@@ -1,0 +1,28 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    double x;
+    int n;
+    cin >> x >> n;
+    
+    double result = 0.0;
+    double power = x;
+    int sign = 1;
+    int odd_factorial = 1;
+    for (int i = 1; i <= n; i++)
+    {
+        result += sign * power * odd_factorial / (2 * i * (2 * i + 1));
+        power *= -x * x;
+        sign *= -1;
+        odd_factorial *= 2 * i - 1;
+    }
+    
+    result += atan(x);
+    cout << result << endl;
+    
+    return 0;
+}

@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double a;
+    int n;
+    cout<<"Input A and N: ";
+    cin>>a>>n;
+    double sum=0.0;
+    double power=1.0;
+    for(int i=0;i<=n;i++){
+        sum+=power;
+        power*=a;
+    }
+    cout<<"Sum of 1 + "<<a<<" + "<<a<<"^2 + ... + "<<a<<"^"<<n<<" is "<<sum<<endl;
+    return 0;
+}

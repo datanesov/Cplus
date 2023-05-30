@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int hour = 3, cells = 1;
+    while(hour <= 24) {
+        cells *= 2;
+        cout << "Через " << hour << " часов: " << cells << " клеток" << endl;
+        hour += 3;
+    }
+
+    return 0;
+}

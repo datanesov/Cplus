@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Введите номер члена последовательности: ";
+    cin >> n;
+
+    int v0 = 0, v1 = 0, v2 = 1, vi;
+    for(int i=4; i<=n; i++) {
+        vi = ((i-1)*v2)/(i*i+1) - v1 + v0;
+        v0 = v1;
+        v1 = v2;
+        v2 = vi;
+    }
+
+    cout << "v" << n << " = " << v2 << endl;
+
+    return 0;
+}

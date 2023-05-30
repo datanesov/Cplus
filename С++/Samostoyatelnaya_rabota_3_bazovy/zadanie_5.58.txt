@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a1[5], a2[5], sum1 = 0, sum2 = 0;
+    cout << "Enter scores of two athletes in five sports:";
+    for(int i=0; i<5; i++) {
+        cin >> a1[i];
+        sum1 += a1[i];
+    }
+    for(int i=0; i<5; i++) {
+        cin >> a2[i];
+        sum2 += a2[i];
+    }
+    cout << "Total score of athlete 1: " << sum1 << endl;
+    cout << "Total score of athlete 2: " << sum2 << endl;
+    return 0;
+}

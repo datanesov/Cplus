@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[12][3];
+    int sumQuarter1 = 0, sumQuarter2 = 0, sumQuarter3 = 0, totalSum = 0;
+    // Ввод данных и вычисление сумм за месяц и квартал
+    for (int i = 0; i < 12; i++) {
+        int sum = 0;
+        for (int j = 0; j < 3; j++) {
+            cin >> arr[i][j];
+            sum += arr[i][j];
+            if(j == 0) {
+                sumQuarter1 += arr[i][j];
+            } else if (j == 1) {
+                sumQuarter2 += arr[i][j];
+            } else {
+                sumQuarter3 += arr[i][j];
+            }
+        }
+        totalSum += sum;
+        cout << "Зарплата работника " << i + 1 << " за квартал: " << sum << endl;
+    }
+    cout << "Общая сумма, выплаченная за квартал всем работникам: " << totalSum << endl;
+    cout << "Общая зарплата всех работников за каждый месяц:\n";
+    cout << "Январь: " << sumQuarter1 << endl;
+    cout << "Февраль: " << sumQuarter2 << endl;
+    cout << "Март: " << sumQuarter3 << endl;
+    return 0;
+}

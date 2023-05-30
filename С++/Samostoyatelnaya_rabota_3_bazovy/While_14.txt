@@ -1,0 +1,15 @@
+#include<iostream>
+using namespace std;
+#include<cmath>
+
+int main() {
+    double a, sum = 0, k = 1;
+    cin >> a;
+    while(sum + 1/k <= a) {
+        sum += 1 / k;
+        k++;
+    }
+    cout << k - 1 << " " << sum;
+    return 0;
+}
+

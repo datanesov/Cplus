@@ -1,0 +1,27 @@
+#include <iostream>
+
+const int SIZE = 14;
+
+int main() {
+    int arr[SIZE];
+    int even_sum = 0;
+    int odd_product = 1;
+
+    std::cout << "Enter " << SIZE << " integers:\n";
+
+    for (int i = 0; i < SIZE; ++i) {
+        std::cin >> arr[i];
+        if (i % 2 == 0) {
+            even_sum += arr[i];
+        }
+        if (arr[i] % 2 != 0) {
+            odd_product *= arr[i];
+        }
+    }
+
+    std::cout << "Sum of elements with even index: " << even_sum << std::endl;
+    std::cout << "Product of elements with odd value: " << odd_product << std::endl;
+
+    return 0;
+}
+

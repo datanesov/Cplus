@@ -1,0 +1,10 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main(){
+    double x,y,z;
+    cin>>x>>y; //ввод значений x и y
+    z=(x+(2+y)/(x*x))/(y+1/sqrt(x*x+10)); //вычисляем значение функции
+    cout<<z;
+    return 0;
+}

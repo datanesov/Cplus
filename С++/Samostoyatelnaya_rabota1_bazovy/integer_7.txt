@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Enter a two-digit number: ";
+    cin >> n;
+    int tens = n/10;
+    int units = n%10;
+    int sum = tens + units;
+    int product = tens * units;
+    cout << "The sum of the digits is " << sum << " and the product of the digits is " << product << endl;
+    return 0;
+}

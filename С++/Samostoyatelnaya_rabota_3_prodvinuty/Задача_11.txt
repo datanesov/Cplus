@@ -1,0 +1,25 @@
+#include<iostream>
+#include<cmath>
+
+using namespace std;
+
+int main()
+{
+    const double g = 9.81;
+    double V, a, x, y, t;
+    cout<<"Введите начальную скорость V: ";
+    cin>>V;
+    cout<<"Введите угол a (в градусах): ";
+    cin>>a;
+    a *= M_PI/180; //переводим в радианы
+    cout<<"Введите шаг по времени t: ";
+    cin>>t;
+    y = 0.0;
+    for(x = 0.0; y >= 0.0; x+=t)
+    {
+        y = V*sin(a)*x - 0.5*g*x*x;
+        if(y >= 0.0)
+            cout<<"Пролетел на расстояние "<<x<<", высота: "<<y<<endl;
+    }
+    return 0;
+}

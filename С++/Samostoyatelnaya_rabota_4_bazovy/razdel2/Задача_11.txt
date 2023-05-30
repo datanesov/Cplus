@@ -1,0 +1,25 @@
+
+#include <iostream>
+
+const int SIZE = 14;
+
+int main() {
+    int arr[SIZE];
+    int even_positive_count = 0;
+    int even_positive_sum = 0;
+
+    std::cout << "Enter " << SIZE << " integers:\n";
+
+    for (int i = 0; i < SIZE; ++i) {
+        std::cin >> arr[i];
+        if (arr[i] > 0 && arr[i] % 2 == 0) {
+            ++even_positive_count;
+            even_positive_sum += arr[i];
+        }
+    }
+
+    std::cout << "Count of even positive elements: " << even_positive_count << std::endl;
+    std::cout << "Sum of even positive elements: " << even_positive_sum << std::endl;
+
+    return 0;
+}

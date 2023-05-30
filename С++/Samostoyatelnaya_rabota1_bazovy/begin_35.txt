@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float V, U, T1, T2, S;
+    cout << "Enter the speed of boat in still water (km/h): ";
+    cin >> V;
+    cout << "Enter the speed of the river current (km/h): ";
+    cin >> U;
+    cout << "Enter the time spent by boat on lake (hours): ";
+    cin >> T1;
+    cout << "Enter the time spent by boat on river (hours): ";
+    cin >> T2;
+    float effective_speed = V - U;
+    float river_distance = effective_speed * T2;
+    float lake_distance = V * T1;
+    S = river_distance + lake_distance;
+    cout << "The distance covered by the boat is: " << S << " km" << endl;
+    return 0;
+}
+

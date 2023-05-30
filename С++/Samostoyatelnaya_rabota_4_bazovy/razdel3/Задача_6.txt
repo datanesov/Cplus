@@ -1,0 +1,150 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    // создаем массив 4x3 и заполняем случайными числами
+    int arr[4][3] = { {-2, 1, 4}, {7, 6, -3}, {5, 0, -1}, {3, 9, 2} };
+    int max1 = arr[0][0], max2 = arr[0][2];
+    int max1Row = 0
+, max2Row = 0;
+    // находим наибольшие элементы в первом и третьем столбцах
+    for(int i = 0; i < 4; i++){
+        if(arr[i][0] > max1){
+            max1 = arr[i][0];
+            max1Row = i;
+        }
+        if(arr[i][2] > max2){
+            max2 = arr[i][2];
+            max2Row = i;
+        }
+    }
+    // меняем местами наибольшие элементы
+    int temp = arr[max1Row][0];
+    arr[max1Row][0] = arr[max2Row][2];
+    arr[max2Row][2] = temp;
+    // выводим измененный массив
+    for(int i = 0; i < 4; i++){
+        for(int j = 0; j < 3; j++){
+            cout << arr[i][j] << " ";
+        }
+        cout << endl;
+    }
+    return 0;
+}
+
+7. 
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    // создаем массив 3x4 и заполняем случайными числами
+    int arr[3][4] = { {2, 5, 1, 3}, {6, 7, 8, 4}, {9, 0, 5, 1} };
+    int min1 = arr[0][0], min2 = arr[2][0];
+    int min1Col = 0, min2Col = 0;
+    // находим наименьшие элементы в первой и третьей строках
+    for(int i = 0; i < 4; i++){
+        if(arr[0][i] < min1){
+            min1 = arr[0][i];
+            min1Col = i;
+        }
+        if(arr[2][i] < min2){
+            min2 = arr[2][i];
+            min2Col = i;
+        }
+    }
+    // меняем местами наименьшие элементы
+    int temp = arr[0][min1Col];
+    arr[0][min1Col] = arr[2][min2Col];
+    arr[2][min2Col] = temp;
+    // выводим измененный массив
+    for(int i = 0; i < 3; i++){
+        for(int j = 0; j < 4; j++){
+            cout << arr[i][j] << " ";
+        }
+        cout << endl;
+    }
+    return 0;
+}
+
+8. 
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    // создаем квадратную матрицу 5x5 и заполняем случайными числами
+    double arr[5][5] = { {4.5, 2.1, 7.8, 1.3, 8.6}, {6.4, 9.0, 3.2, 4.1, 2.9}, {5.7, 0.8, 2.1, 1.2, 3.5},
+                      {2.8, 9.3, 6.1, 5.5, 1.4}, {5.2, 7.9, 3.0, 0.7, 1.8} };
+    double prod = 1;
+    for(int j = 0; j < 5; j++){
+        double min = arr[0][j];
+        for(int i = 0; i < 5; i++){
+            if(arr[i][j] < min){
+                min = arr[i][j];
+            }
+        }
+        prod *= min;
+    }
+    // выводим произведение наименьших элементов каждого столбца
+    cout << "Произведение наименьших элементов каждого столбца: ";
+    cout << prod << endl;
+    return 0;
+}
+
+9. 
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    // создаем массив 5x6 и заполняем случайными числами
+    int arr[5][6] = { {4, 2, 7, -1, 8, 6}, {6, -9, 3, 4, -2, 1}, {5, 0, 2, 1, 3, 5},
+                      {-2, 9, -6, 5, 1, 4}, {5, 7, -3, 0, 1, 8} };
+    for(int j = 0; j < 6; j++){
+        double sum = 0;
+        int count = 0;
+        int min = arr[j][0], max = arr[j][0];
+        for(int i = 0; i < 5; i++){
+            if(arr[i][j] > 0){
+                sum += arr[i][j];
+                count++;
+            }
+            if(arr[j][i] < min){
+                min = arr[j][i];
+            }
+            if(arr[j][i] > max){
+                max = arr[j][i];
+            }
+        }
+        // выводим среднее арифметическое и максимальный/минимальный элементы каждой строки
+        cout << "Среднее арифметическое столбца " << j+1 << ": " << sum/count << endl;
+        cout << "Максимальный элемент " << j+1 << "-ой строки: " << max << endl;
+        cout << "Минимальный элемент " << j+1 << "-ой строки: " << min << endl;
+    }
+    return 0;
+}
+
+10. 
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    // создаем массив 7x8 и заполняем случайными числами
+    int arr[7][8] = { {4, 2, 7, -1, 8, 6, -3, 1}, {6, -9, 3, 4, -2, 1, 9, 8}, {5, 0, 2, 1, 3, 5, -7, 4},
+                      {-2, 9, -6, 5, 1, 4, 2, 0}, {5, 7, -3, 0, 1, 8, -5, 3}, {2, 1, 4, 6, 9, 3, -1, 7},
+                      {8, 4, -2, 1, 7, 5, 0, -3} };
+    for(int j = 0; j < 8; j++){
+        int oddCount = 0;
+        for(int i = 0; i < 7; i++){
+            if(arr[i][j] % 2 == 1){
+                oddCount++;
+            }
+        }
+        // выводим количество нечетных элементов каждого столбца
+        cout << "Количество нечетных элементов в столбце " << j+1 << ": " << oddCount << endl;
+    }
+    return 0;
+}
+

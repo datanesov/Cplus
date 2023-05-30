@@ -1,0 +1,117 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+    int n, m;
+    cout << "Введите размер матрицы (n x m): ";
+    cin >> n >> m;
+
+    int matrix[n][m];
+    cout << "Введите элементы матрицы: " << endl;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            cin >> matrix[i][j];
+        }
+    }
+
+    vector<int> counts(n, 0);
+    int min_count = m;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            for (int k = j+1; k < m; k++) {
+                if (matrix[i][j] == matrix[i][k]) {
+                    counts[i]++;
+                }
+            }
+            if (counts[i] < min_count) {
+                min_count = counts[i];
+            }
+        }
+    }
+
+    for (int i = 0; i < n; i++) {
+        if (counts[i] == min_count) {
+cout << "Номер строки, содержащей минимальное число одинаковых элементов: " << i+1 << endl;
+            break;
+        }
+    }
+    return 0;
+}
+
+
+29. Программа нахождения произведения элементов матрицы, лежащих ниже главной диагонали:
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n;
+    cout << "Введите размер квадратной матрицы: ";
+    cin >> n;
+
+    int matrix[n][n];
+    cout << "Введите элементы матрицы: " << endl;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            cin >> matrix[i][j];
+        }
+    }
+
+    int product = 1;
+    for (int i = 1; i < n; i++) {
+        for (int j = 0; j < i; j++) {
+            product *= matrix[i][j];
+        }
+    }
+
+    cout << "Произведение элементов матрицы, лежащих ниже главной диагонали: " << product << endl;
+    return 0;
+}
+
+30. Программа нахождения номера строки, содержащей максимальное число одинаковых элементов в матрице целых чисел размера NxM:
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+    int n, m;
+    cout << "Введите размер матрицы (n x m): ";
+    cin >> n >> m;
+
+    int matrix[n][m];
+    cout << "Введите элементы матрицы: " << endl;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            cin >> matrix[i][j];
+        }
+    }
+
+    vector<int> counts(n, 0);
+    int max_count = -1;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            for (int k = j+1; k < m; k++) {
+                if (matrix[i][j] == matrix[i][k]) {
+                    counts[i]++;
+                }
+            }
+            if (counts[i] > max_count) {
+                max_count = counts[i];
+            }
+        }
+    }
+
+    for (int i = 0; i < n; i++) {
+        if (counts[i] == max_count) {
+            cout << "Номер строки, содержащей максимальное число одинаковых элементов: " << i+1 << endl;
+            break;
+        }
+    }
+    return 0;
+}
+

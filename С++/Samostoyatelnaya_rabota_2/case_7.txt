@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int units;
+    float mass;
+    cout << "Enter a unit number (1 for kilogram, 2 for milligram, 3 for gram, 4 for tonne, 5 for centner): ";
+    cin >> units;
+    cout << "Enter the mass: ";
+    cin >> mass;
+    switch (units) {
+        case 1:
+            // mass is already in kilograms
+            break;
+        case 2:
+            mass /= 1000000; // convert to kilograms
+            break;
+        case 3:
+            mass /= 1000; // convert to kilograms
+            break;
+        case 4:
+            mass *= 1000; // convert to kilograms
+            break;
+        case 5:
+            mass *= 100; // convert to kilograms
+            break;
+        default:
+            cout << "Invalid unit";
+            return 0;
+    }
+    cout << "Mass in kilograms: " << mass;
+    return 0;
+}

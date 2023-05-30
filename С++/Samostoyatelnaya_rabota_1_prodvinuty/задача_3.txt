@@ -1,0 +1,25 @@
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    double H, L, V, a;
+    const double g = 9.81; // ускорение свободного падения
+
+    cout << "Введите максимальную высоту подъема: ";
+    cin >> H;
+
+    cout << "Введите дальность полета: ";
+    cin >> L;
+
+    a = atan(4 * H / L);
+    V = sqrt(g * L / pow(sin(a), 2));
+
+    cout << "Начальная скорость: " << V << endl;
+    cout << "Угол a: " << a * 180 / M_PI << " градусов" << endl;
+
+    return 0;
+}

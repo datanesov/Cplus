@@ -1,0 +1,11 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main(){
+    double a,b,x;
+    cin>>a>>b; //ввод значений a и b
+    x=(2/(a*a+25)+b)/(sqrt(b)+(a+b)/2); //вычисляем значение функции
+    cout<<x;
+    return 0;
+}
+

@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float A, X, Y, price_per_kg;
+    cout << "Enter the value of X and A: ";
+    cin >> X >> A;
+    price_per_kg = A / X;
+    cout << "Price per kg is: " << price_per_kg << endl;
+    cout << "Enter the value of Y: ";
+    cin >> Y;
+    float total_price = Y * price_per_kg;
+    cout << "Price for " << Y << " kg is: " << total_price << endl;
+    return 0;
+}

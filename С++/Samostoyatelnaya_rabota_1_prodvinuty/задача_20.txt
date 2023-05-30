@@ -1,0 +1,26 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+    double p, p1;
+    int n;
+
+    cout << "Enter the probability of hitting the aircraft carrier (p): ";
+    cin >> p;
+    cout << "Enter the probability of sinking a submarine after being detected (p1): ";
+    cin >> p1;
+    cout << "Enter the number of submarines attacking the aircraft carrier (n): ";
+    cin >> n;
+
+    double q = (1 - p) * (1 - p1);
+    double numerator = 1 - pow(q, n);
+    double denominator = 1 - q;
+
+    double result = p * (1 - p1) * (numerator / denominator);
+
+    cout << "The probability of the aircraft carrier being sunk and the submarines escaping without losses is " << result << endl;
+
+    return 0;
+}

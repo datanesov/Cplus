@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float a, b, c, V, S;
+    cout << "Enter the lengths of edges of rectangular parallelepiped: ";
+    cin >> a >> b >> c;
+    V = a * b * c;
+    S = 2 * ((a * b) + (b * c) + (a * c));
+    cout << "Volume of the rectangular parallelepiped is: " << V << endl;
+    cout << "Surface area of the rectangular parallelepiped is: " << S << endl;
+    return 0;
+}

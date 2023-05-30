@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int n, hours;
+    cin >> n;
+    hours = n / 3600;
+    cout << hours << endl;
+    return 0;
+}
+

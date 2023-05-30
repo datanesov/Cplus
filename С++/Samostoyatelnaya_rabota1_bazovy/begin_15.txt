@@ -1,0 +1,16 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+ float D;
+    cout << "Enter the area of the circle: ";
+    cin >> S;
+    D = sqrt((4 * S) / M_PI);
+    L = M_PI * D;
+    cout << "Diameter of the circle: " << D << endl;
+    cout << "Circumference of the circle: " << L << endl;
+return 0;
+}
+

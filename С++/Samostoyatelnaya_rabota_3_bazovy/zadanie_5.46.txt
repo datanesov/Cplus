@@ -1,0 +1,24 @@
+#include <iostream>
+
+int main()
+{
+    int n;
+    float total_resistance = 0.0;
+
+    std::cout << "Enter value of n: ";
+    std::cin >> n;
+    float resistance[n];
+
+    for (int i = 0; i < n; i++)
+    {
+        std::cout << "Enter resistance of element " << i + 1 << ": ";
+        std::cin >> resistance[i];
+        total_resistance += 1 / resistance[i];
+    }
+
+    total_resistance = 1 / total_resistance;
+
+    std::cout << "Total resistance of the circuit is: " << total_resistance << std::endl;
+
+    return 0;
+}

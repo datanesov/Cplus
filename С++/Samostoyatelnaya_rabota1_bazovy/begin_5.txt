@@ -1,0 +1,14 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main() {
+    float a, V, S;
+    cout << "Enter edge length of cube: ";
+    cin >> a;
+    V = pow(a, 3);
+    S = 6 * pow(a, 2);
+    cout << "Volume of the cube is: " << V << endl;
+    cout << "Surface area of the cube is: " << S << endl;
+    return 0;
+}

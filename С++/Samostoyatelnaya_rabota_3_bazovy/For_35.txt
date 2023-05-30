@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int N;
+    cout << "Enter N: ";
+    cin >> N;
+    
+    int a1 = 1, a2 = 2, a3 = 3, ak;
+    cout << a1 << " " << a2 << " " << a3 << " ";
+    
+    for(int i = 4; i <= N; i++)
+    {
+        ak = a2 + a1 - 2*a3;
+        cout << ak << " ";
+        a1 = a2;
+        a2 = a3;
+        a3 = ak;
+    }
+    
+    return 0;
+}

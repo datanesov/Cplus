@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    double a, b;
+    cin >> n >> a >> b;
+    
+    double h = (b - a) / n;
+    cout << "H = " << h << endl;
+    
+    for (int i = 0; i <= n; i++)
+    {
+        cout << a + i * h << " ";
+    }
+    cout << endl;
+    
+    return 0;
+}

@@ -1,0 +1,16 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+ float L, R, S;
+    cout << "Enter the length of the circumference: ";
+    cin >> L;
+    R = L / (2 * M_PI);
+    S = M_PI * R * R;
+    cout << "Radius of the circle: " << R << endl;
+    cout << "Area of the circle: " << S << endl;
+return 0;
+}
+

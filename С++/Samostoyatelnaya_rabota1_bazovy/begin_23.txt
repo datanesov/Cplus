@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b, c;
+    cout << "Enter three values:\n";
+    cin >> a >> b >> c;
+
+    int temp1 = a; // swap values
+    int temp2 = b;
+    a = c;
+    b = temp1;
+    c = temp2;
+
+    cout << "A: " << a << endl;
+    cout << "B: " << b << endl;
+    cout << "C: " << c << endl;
+
+    return 0;
+}

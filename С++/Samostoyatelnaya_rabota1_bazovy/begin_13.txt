@@ -1,0 +1,17 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+ float R1, R2, S1, S2, S3;
+    cout << "Enter the radii of the two circles, where R1 > R2: ";
+    cin >> R1 >> R2;
+    S1 = M_PI * R1 * R1;
+    S2 = M_PI * R2 * R2;
+    S3 = S1 - S2;
+    cout << "Area of first circle: " << S1 << endl;
+    cout << "Area of second circle: " << S2 << endl;
+    cout << "Area of the ring: " << S3 << endl;
+ return 0;
+}

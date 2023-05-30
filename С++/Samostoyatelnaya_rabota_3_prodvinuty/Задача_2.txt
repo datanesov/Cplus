@@ -1,0 +1,25 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    double x, result = 1, fact = 1;
+    int n;
+    const int max_iter = 10; // задаем границу ряда
+
+    cout << "Enter the value of x: ";
+    cin >> x;
+
+    for (int i = 1; i <= max_iter; i++)
+    {
+        fact *= i;
+        result += pow(x,i) / fact;
+    }
+
+    cout << "exp(" << x << ") = " << result << endl;
+
+    return 0;
+}
+

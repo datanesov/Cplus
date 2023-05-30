@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    double a1, b1, c1, a2, b2, c2;
+    cout << "Введите коэффициенты системы уравнений (А1, В1, С1, А2, В2, С2, через пробел): ";
+    cin >> a1 >> b1 >> c1 >> a2 >> b2 >> c2;
+
+    double D = a1*b2 - a2*b1; // определитель матрицы
+    double x = (c1*b2 - c2*b1)/D;
+    double y = (a1*c2 - a2*c1)/D;
+
+    cout << "Решение системы уравнений: x = " << x << ", y = " << y << endl;
+
+    return 0;
+}
+

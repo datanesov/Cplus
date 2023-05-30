@@ -1,0 +1,96 @@
+а)
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    const int ROWS = 3;
+    const int COLS = 15;
+    int scores[ROWS][COLS];
+
+    // заполнение массива
+    for (int i = 0; i < ROWS; i++) {
+        for (int j = 0; j < COLS; j++) {
+            cout << "Введите результаты " << i+1 << " программы для " << j+1 << " спортсмена: ";
+            cin >> scores[i][j];
+        }
+    }
+
+    // вывод на печать массива
+    for (int i = 0; i < ROWS; i++) {
+        for (int j = 0; j < COLS; j++) {
+            cout << scores[i][j] << "\t";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+б)
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    const int ROWS = 3;
+    const int COLS = 15;
+    int scores[ROWS][COLS];
+    float averageScores[COLS] = {0};
+
+    // заполнение массива
+    for (int i = 0; i < ROWS; i++) {
+        for (int j = 0; j < COLS; j++) {
+            cout << "Введите результаты " << i+1 << " программы для " << j+1 << " спортсмена: ";
+            cin >> scores[i][j];
+        }
+    }
+
+    // вычисление среднего количества баллов для каждого спортсмена
+    for (int j = 0; j < COLS; j++) {
+        for (int i = 0; i < ROWS; i++) {
+            averageScores[j] += scores[i][j];
+        }
+        averageScores[j] /= ROWS;
+    }
+
+    // вывод на печать средних значений по каждому спортсмену
+    for (int j = 0; j < COLS; j++) {
+        cout << "Средний балл для спортсмена " << j+1 << ": " << averageScores[j] << endl;
+    }
+
+    return 0;
+}
+в)
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    const int ROWS = 3;
+    const int COLS = 15;
+    int scores[ROWS][COLS];
+    float averageScores[ROWS] = {0};
+
+    // заполнение массива
+    for (int i = 0; i < ROWS; i++) {
+        for (int j = 0; j < COLS; j++) {
+            cout << "Введите результаты " << i+1 << " программы для " << j+1 << " спортсмена: ";
+            cin >> scores[i][j];
+        }
+    }
+
+    // вычисление среднего количества баллов для каждого вида программы
+    for (int i = 0; i < ROWS; i++) {
+        for (int j = 0; j < COLS; j++) {
+            averageScores[i] += scores[i][j];
+        }
+        averageScores[i] /= COLS;
+    }
+
+    // вывод на печать средних значений по каждому виду программы
+    cout << "Средний балл по обязательной программе: " << averageScores[0] << endl;
+    cout << "Средний балл по короткой программе: " << averageScores[1] << endl;
+    cout << "Средний балл по произвольной программе: " << averageScores[2] << endl;
+
+    return 0;
+}

@@ -1,0 +1,10 @@
+#include <iostream>
+
+int main() {
+    double m, a, Ft;
+    std::cin >> m >> a;
+    Ft = (m * 9.81 * std::sin(a) < m * 9.81 * std::cos(a)) ? m * 9.81 * std::sin(a) : m * 9.81 * std::cos(a);
+    std::cout << Ft << std::endl;
+    return 0;
+}
+

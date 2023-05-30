@@ -1,0 +1,57 @@
+
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main()
+{
+    int n = 5;
+    vector<vector<int>> matrix = vector<vector<int>>(n, vector<int>(n)); //создание двумерного массива
+
+    int num = 1, row = 0, col = 0;
+    int len = n-1; //длина перемещения
+    int dir = 1; //направление движения
+
+    while(len >= 0)
+    {
+        //заполнение верхней строки
+        for(int i = col; i <= col+len; i++)
+        {
+            matrix[row][i] = num;
+            num++;
+        }
+        //заполнение правого столбца
+        for(int i = row+1; i <= row+len; i++)
+        {
+            matrix[i][col+len] = num;
+            num++;
+        }
+        //заполнение нижней строки
+        for(int i = col+len-1; i >= col; i--)
+        {
+            matrix[row+len][i] = num;
+            num++;
+        }
+        //заполнение левого столбца
+        for(int i = row+len-1; i > row; i--)
+        {
+            matrix[i][col] = num;
+            num++;
+        }
+
+        len -= 2;
+        row++;
+        col++;
+    }
+
+    for(int i = 0; i < n; i++)
+    {
+        for(int j = 0; j < n; j++)
+            cout << matrix[i][j] << " ";
+        cout << endl;
+    }
+
+    return 0;
+}
+

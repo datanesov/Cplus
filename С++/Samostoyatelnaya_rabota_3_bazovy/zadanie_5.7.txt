@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  float price = 20.4;
+  for (int i = 2; i <= 20; ++i) {
+    cout << i << " шт. стоят " << i * price << " руб." << endl;
+  }
+  return 0;
+}
+

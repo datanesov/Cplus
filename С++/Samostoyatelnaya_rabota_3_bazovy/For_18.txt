@@ -1,0 +1,15 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    double A, result = 1;
+    int N;
+    cin >> A >> N;
+    for(int i=1; i<=N; i++) {
+        result += pow(-1,i) * pow(A,i);
+    }
+    cout << result << endl;
+    return 0;
+}
+

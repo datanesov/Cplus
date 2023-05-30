@@ -1,0 +1,26 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    double x;
+    int n;
+    cin >> x >> n;
+    
+    double result = 0.0;
+    double power = x;
+    int sign = 1;
+    for (int i = 1; i <= n; i++)
+    {
+        result += sign * power / i;
+        power *= -x;
+        sign *= -1;
+    }
+    
+    result += log(1 + x);
+    cout << result << endl;
+    
+    return 0;
+}

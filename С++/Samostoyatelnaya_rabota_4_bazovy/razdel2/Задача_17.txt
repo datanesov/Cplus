@@ -1,0 +1,32 @@
+#include <iostream>
+
+const int SIZE = 15;
+
+int main() {
+    int arr[SIZE];
+    int negative_count = 0;
+    int positive_product = 1;
+    int zero_count = 0;
+
+    std::cout << "Enter " << SIZE << " integers:\n";
+
+    for (int i = 0; i < SIZE; ++i) {
+        std::cin >> arr[i];
+
+        if (arr[i] < 0) {
+            ++negative_count;
+        }
+        else if (arr[i] > 0) {
+            positive_product *= arr[i];
+        }
+        else {
+            ++zero_count;
+        }
+    }
+
+    std::cout << "Number of negative elements: " << negative_count << std::endl;
+    std::cout << "Product of positive elements: " << positive_product << std::endl;
+    std::cout << "Number of zero elements: " << zero_count << std::endl;
+
+    return 0;
+}

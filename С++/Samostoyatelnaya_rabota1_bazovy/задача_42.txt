@@ -1,0 +1,114 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  float a;
+  cout << "Enter a: ";
+  cin >> a;
+  float a2 = a * a;
+  float a3 = a * a2;
+  float a6 = a3 * a3;
+  float a10 = a6 * a2;
+  cout << "a^3 = " << a3 << endl;
+  cout << "a^10 = " << a10 << endl;
+  return 0;
+}
+
+
+б) Program for calculating a^4 and a^20 using only multiplication:
+
+#include <iostream>
+using namespace std;
+
+int main() {
+  float a;
+  cout << "Enter a: ";
+  cin >> a;
+  float a2 = a * a;
+  float a4 = a2 * a2;
+  float a8 = a4 * a4;
+  float a16 = a8 * a8;
+  float a20 = a16 * a4;
+  cout << "a^4 = " << a4 << endl;
+  cout << "a^20 = " << a20 << endl;
+  return 0;
+}
+
+в) Program for calculating a^5 and a^13 using only multiplication:
+
+#include <iostream>
+using namespace std;
+
+int main() {
+  float a;
+  cout << "Enter a: ";
+  cin >> a;
+  float a2 = a * a;
+  float a3 = a * a2;
+  float a5 = a3 * a2;
+  float a10 = a5 * a5;
+  float a13 = a10 * a3;
+  cout << "a^5 = " << a5 << endl;
+  cout << "a^13 = " << a13 << endl;
+  return 0;
+}
+
+г) Program for calculating a^5 and a^19 using only multiplication:
+
+#include <iostream>
+using namespace std;
+
+int main() {
+  float a;
+  cout << "Enter a: ";
+  cin >> a;
+  float a2 = a * a;
+  float a4 = a2 * a2;
+  float a5 = a4 * a;
+  float a10 = a5 * a5;
+  float a20 = a10 * a10;
+  float a19 = a20 / a;
+  cout << "a^5 = " << a5 << endl;
+  cout << "a^19 = " << a19 << endl;
+  return 0;
+}
+
+д) Program for calculating a^2 and a^17 using only multiplication:
+
+#include <iostream>
+using namespace std;
+
+int main() {
+  float a;
+  cout << "Enter a: ";
+  cin >> a;
+  float a2 = a * a;
+  float a4 = a2 * a2;
+  float a8 = a4 * a4;
+  float a16 = a8 * a8;
+  float a17 = a16 * a;
+  cout << "a^2 = " << a2 << endl;
+  cout << "a^17 = " << a17 << endl;
+  return 0;
+}
+
+е) Program for calculating a^4, a^12 and a^28 using only multiplication:
+
+#include <iostream>
+using namespace std;
+
+int main() {
+  float a;
+  cout << "Enter a: ";
+  cin >> a;
+  float a2 = a * a;
+  float a4 = a2 * a2;
+  float a8 = a4 * a4;
+  float a12 = a8 * a4 * a;
+  float a16 = a8 * a8;
+  float a28 = a16 * a12;
+  cout << "a^4 = " << a4 << endl;
+  cout << "a^12 = " << a12 << endl;
+  cout << "a^28 = " << a28 << endl;
+  return 0;
+}

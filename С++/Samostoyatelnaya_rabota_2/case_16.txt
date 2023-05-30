@@ -1,0 +1,82 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int age;
+    cout<<"Enter age between 20 to 69: ";
+    cin>>age;
+    int rem=age%10; //finding the remainder
+    switch(age)
+    {
+        case 20:
+            cout<<"Twenty years"<<endl;
+            break;
+        case 30:
+            cout<<"Thirty years"<<endl;
+            break;
+        case 40:
+            cout<<"Forty years"<<endl;
+            break;
+        case 50:
+            cout<<"Fifty years"<<endl;
+            break;
+        case 60:
+            cout<<"Sixty years"<<endl;
+            break;
+        default:
+            if(age<20 || age>69)
+                cout<<"Invalid Age"<<endl;
+            else
+            {
+                switch(age/10) //finding the ten's digit
+                {
+                    case 2:
+                        cout<<"Twenty ";
+                        break;
+                    case 3:
+                        cout<<"Thirty ";
+                        break;
+                    case 4:
+                        cout<<"Forty ";
+                        break;
+                    case 5:
+                        cout<<"Fifty ";
+                        break;
+                    case 6:
+                        cout<<"Sixty ";
+                        break;
+                }
+                switch(rem) //finding the one's digit
+                {
+                    case 1:
+                        cout<<"one year"<<endl;
+                        break;
+                    case 2:
+                        cout<<"two years"<<endl;
+                        break;
+                    case 3:
+                        cout<<"three years"<<endl;
+                        break;
+                    case 4:
+                        cout<<"four years"<<endl;
+                        break;
+                    case 5:
+                        cout<<"five years"<<endl;
+                        break;
+                    case 6:
+                        cout<<"six years"<<endl;
+                        break;
+                    case 7:
+                        cout<<"seven years"<<endl;
+                        break;
+                    case 8:
+                        cout<<"eight years"<<endl;
+                        break;
+                    case 9:
+                        cout<<"nine years"<<endl;
+                        break;
+                }
+            }
+    }
+    return 0;
+}

@@ -1,0 +1,10 @@
+#include<iostream>
+using namespace std;
+int main(){
+    double population,area,density;
+    cin>>population>>area; //ввод населения и площади государства
+    density=population/area; //считаем плотность населения
+    cout<<density;
+    return 0;
+}
+

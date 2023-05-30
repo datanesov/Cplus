@@ -1,0 +1,12 @@
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    float a, P;
+    cout << "Enter side of square: ";
+    cin >> a;
+    P = 4 - a;
+    cout << "Perimeter of the square is: " << P << endl;
+    return 0;
+}

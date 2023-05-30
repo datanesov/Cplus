@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    double a = 1.3; // задаем значение а
+    double num1 = 1 + 1.0 / 2; // первое число последовательности
+    double num2 = 1 + 1.0 / 3; // второе число последовательности
+    
+    // проверяем, какое число меньше а, и выводим его
+    if (num1 < a) cout << num1 << endl;
+    else if (num2 < a) cout << num2 << endl;
+    else cout << "Нет таких чисел в последовательности" << endl;
+    return 0;
+}

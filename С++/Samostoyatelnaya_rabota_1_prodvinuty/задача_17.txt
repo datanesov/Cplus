@@ -1,0 +1,9 @@
+#include <iostream>
+
+int main() {
+    double v, V, A, m_e = 9.1e-31, h = 6.626e-34;
+    std::cin >> v >> V;
+    A = (h * v < m_e * V * V / 2) ? 0 : h * v - m_e * V * V / 2;
+    std::cout << A << std::endl;
+    return 0;
+}

@@ -1,0 +1,12 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main(){
+    double a,b,c,perimeter;
+    cin>>a>>b; //ввод катетов треугольника
+    c=sqrt(a*a+b*b); //находим гипотенузу
+    perimeter=a+b+c; //находим периметр
+    cout<<perimeter;
+    return 0;
+}
+

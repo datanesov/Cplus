@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Enter a two-digit number: ";
+    cin >> n;
+    int tens = n/10;
+    int units = n%10;
+    cout << "The tens digit is " << tens << " and the units digit is " << units << endl;
+    return 0;
+}
+

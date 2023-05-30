@@ -1,0 +1,11 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main(){
+    double r1,r2,area;
+    cin>>r1>>r2; //ввод внешнего и внутреннего радиусов кольца
+    area=M_PI*(r1*r1-r2*r2); //находим площадь кольца
+    cout<<area;
+    return 0;
+}
+

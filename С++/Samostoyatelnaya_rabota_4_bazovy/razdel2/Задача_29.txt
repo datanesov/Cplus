@@ -1,0 +1,18 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    double arr[18] = {-2.1, 3.7, -1.5, 0.8, -4.2, 2.3, 5.6, -6.4, 0.9, -3.2, 0.4, 2.1, -5.7, 1.6, -1.9, 4.3, 0.7, 2.6};
+    double prod_pos = 1, sum_abs_neg = 0;
+    for(int i = 0; i < 18; i++) {
+        if(arr[i] > 0) {
+            prod_pos *= arr[i];
+        } else if(arr[i] < 0) {
+            sum_abs_neg += abs(arr[i]); // sum of absolute values of negative elements
+        }
+    }
+    double quotient = prod_pos / sum_abs_neg;
+    cout << "Quotient of product of positive elements and sum of absolute values of negative elements: " << quotient << endl;
+    return 0;
+}

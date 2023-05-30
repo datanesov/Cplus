@@ -1,0 +1,47 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+string units[] = {"", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
+string tens[] = {"", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"};
+string teens[] = {"ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"};
+
+int main()
+{
+    int num, hundreds, tensDigit, unitsDigit;
+    cout << "Enter an integer between 1 and 999: ";
+    cin >> num;
+    hundreds = num / 100;
+    tensDigit = (num / 10) % 10;
+    unitsDigit = num % 10;
+    if (num == 0)
+        cout << "Zero rubles" << endl;
+    else
+    {
+        cout << units[hundreds] << " hundred ";
+        if (tensDigit == 1)
+            cout << teens[unitsDigit] << " ";
+        else
+            cout << tens[tensDigit] << " " << units[unitsDigit] << " ";
+        if (num % 100 >= 11 && num % 100 <= 14)
+            cout << "rubles" << endl;
+        else
+        {
+            switch (unitsDigit)
+            {
+                case 1:
+                    cout << "ruble" << endl;
+                    break;
+                case 2:
+                case 3:
+                case 4:
+                    cout << "rubles" << endl;
+                    break;
+                default:
+                    cout << "rubley" << endl;
+            }
+        }
+    }
+    return 0;
+}

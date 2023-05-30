@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    double price = 10.50; // задаем цену за 1 кг конфет
+    
+    for (int i = 1; i <= 10; i++) {
+        cout << i << " кг: " << price * i << " руб." << endl;
+    }
+    return 0;
+}

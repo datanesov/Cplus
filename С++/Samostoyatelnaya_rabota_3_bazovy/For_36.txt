@@ -1,0 +1,20 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    int N, K;
+    cout << "Enter N and K: ";
+    cin >> N >> K;
+    
+    double sum = 0;
+    for(int i = 1; i <= N; i++)
+    {
+        sum += pow(i, K);
+    }
+    cout << "Sum: " << sum << endl;
+    
+    return 0;
+}
+

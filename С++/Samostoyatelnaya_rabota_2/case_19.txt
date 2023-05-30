@@ -1,0 +1,166 @@
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int year,color,animal;
+    cout<<"Enter a year after 1984: ";
+    cin>>year;
+    if(year<1984) //checking if the year is valid
+    {
+        cout<<"Invalid Year"<<endl;
+        return 0; //terminating the program
+    }
+    color=(year-1984)%5; //finding the color of the year
+    animal=(year-1984)%12; //finding the animal of the year
+    switch(color)
+    {
+        case 0:
+            cout<<"Green ";
+            break;
+        case 1:
+            cout<<"Red ";
+            break;
+        case 2:
+            cout<<"Yellow ";
+            break;
+        case 3:
+            cout<<"White ";
+            break;
+        case 4:
+            cout<<"Black ";
+            break;
+    }
+    switch(animal)
+    {
+        case 0:
+            cout<<"Rat Year"<<endl;
+            break;
+        case 1:
+            cout<<"Ox Year"<<endl;
+            break;
+        case 2:
+            cout<<"Tiger Year"<<endl;
+            break;
+        case 3:
+            cout<<"Rabbit Year"<<endl;
+            break;
+        case 4:
+            cout<<"Dragon Year"<<endl;
+            break;
+        case 5:
+            cout<<"Snake Year"<<endl;
+            break;
+        case 6:
+            cout<<"Horse Year"<<endl;
+            break;
+case 7:
+            cout<<"Goat Year"<<endl;
+            break;
+        case 8:
+            cout<<"Monkey Year"<<endl;
+            break;
+        case 9:
+            cout<<"Rooster Year"<<endl;
+            break;
+        case 10:
+            cout<<"Dog Year"<<endl;
+            break;
+        case 11:
+            cout<<"Pig Year"<<endl;
+            break;
+    }
+    return 0;
+}
+
+Program 5: Знак Зодиака
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int day,month;
+    cout<<"Enter a date (day month): ";
+    cin>>day>>month;
+    if(day<1 || day>31 || month<1 || month>12) //checking if the date is valid
+    {
+        cout<<"Invalid Date"<<endl;
+        return 0; //terminating the program
+    }
+    switch(month)
+    {
+        case 1:
+            if(day>=20)
+                cout<<"Aquarius"<<endl;
+            else
+                cout<<"Capricorn"<<endl;
+            break;
+        case 2:
+            if(day>=19)
+                cout<<"Pisces"<<endl;
+            else
+                cout<<"Aquarius"<<endl;
+            break;
+        case 3:
+            if(day>=21)
+                cout<<"Aries"<<endl;
+            else
+                cout<<"Pisces"<<endl;
+            break;
+        case 4:
+            if(day>=20)
+                cout<<"Taurus"<<endl;
+            else
+                cout<<"Aries"<<endl;
+            break;
+        case 5:
+            if(day>=21)
+                cout<<"Gemini"<<endl;
+            else
+                cout<<"Taurus"<<endl;
+            break;
+        case 6:
+            if(day>=22)
+                cout<<"Cancer"<<endl;
+            else
+                cout<<"Gemini"<<endl;
+            break;
+        case 7:
+            if(day>=23)
+                cout<<"Leo"<<endl;
+            else
+                cout<<"Cancer"<<endl;
+            break;
+        case 8:
+            if(day>=23)
+                cout<<"Virgo"<<endl;
+            else
+                cout<<"Leo"<<endl;
+            break;
+        case 9:
+            if(day>=23)
+                cout<<"Libra"<<endl;
+            else
+                cout<<"Virgo"<<endl;
+            break;
+        case 10:
+            if(day>=23)
+                cout<<"Scorpio"<<endl;
+            else
+                cout<<"Libra"<<endl;
+            break;
+        case 11:
+            if(day>=22)
+                cout<<"Sagittarius"<<endl;
+            else
+                cout<<"Scorpio"<<endl;
+            break;
+        case 12:
+            if(day>=22)
+                cout<<"Capricorn"<<endl;
+            else
+                cout<<"Sagittarius"<<endl;
+            break;
+    }
+    return 0;
+}

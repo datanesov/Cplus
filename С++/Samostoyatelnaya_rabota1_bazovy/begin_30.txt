@@ -1,0 +1,16 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    float a;
+    cout << "Enter angle in radians:\n";
+    cin >> a;
+
+    float pi = 3.14;
+    float deg = a*180/pi;
+
+    cout << "Angle in degrees: " << deg << endl;
+
+    return 0;
+}

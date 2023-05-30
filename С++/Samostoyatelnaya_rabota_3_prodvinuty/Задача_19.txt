@@ -1,0 +1,27 @@
+#include<iostream>
+#include<cmath>
+#include<cstdlib>
+#include<ctime>
+
+using namespace std;
+
+int main()
+{
+    const double a = 2.0;
+    const int N = 1000000;
+    int kolvo = 0;
+    double x, y, S;
+    srand(time(NULL));
+    for(int i = 0; i < N; i++)
+    {
+        x = ((double)rand())/RAND_MAX*a;
+        y = ((double)rand())/RAND_MAX*a*2.5 - a;
+        if(y >= a*a - x*x && y <= 2.5*a - x)
+            kolvo++;
+    }
+    S = a*a*2.5*((double)kolvo)/N;
+    cout<<"Значение S: "<<S<<endl;
+    cout<<"Точное значение: "<<(15.0/8.0 - 2.0*log(2.0))*a*a<<endl;
+    return 0;
+}
+

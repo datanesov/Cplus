@@ -1,0 +1,18 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    int a, b, c, distanceB, distanceC;
+    cout << "Enter coordinates of points A, B, and C: ";
+    cin >> a >> b >> c;
+    distanceB = abs(a - b);
+    distanceC = abs(a - c);
+    if (distanceB < distanceC)
+        cout << "Point B is closer to point A by " << distanceB << " units." << endl;
+    else
+        cout << "Point C is closer to point A by " << distanceC << " units." << endl;
+    return 0;
+}

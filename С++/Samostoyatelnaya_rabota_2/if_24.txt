@@ -1,0 +1,17 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    double x, result;
+    cout << "Enter a real number x: ";
+    cin >> x;
+    if (x > 0)
+        result = 2 - sin(x);
+    else
+        result = 6 - x;
+    cout << "f(x) = " << result << endl;
+    return 0;
+}

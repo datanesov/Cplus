@@ -1,0 +1,9 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int k, day_num;
+    cin >> k;
+    day_num = (k + 0) % 7;
+    cout << day_num << endl;
+    return 0;
+}

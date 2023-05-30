@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float A, B, X, Y, chocolate_price_per_kg, toffee_price_per_kg;
+    cout << "Enter the value of X, A, Y and B: ";
+    cin >> X >> A >> Y >> B;
+    chocolate_price_per_kg = A / X;
+    toffee_price_per_kg = B / Y;
+    cout << "Price of chocolate per kg: " << chocolate_price_per_kg << endl;
+    cout << "Price of toffee per kg: " << toffee_price_per_kg << endl;
+    if (chocolate_price_per_kg > toffee_price_per_kg) {
+        cout << "Chocolate is " << chocolate_price_per_kg / toffee_price_per_kg << " times more expensive than toffee." << endl;
+    } else {
+        cout << "Toffee is " << toffee_price_per_kg / chocolate_price_per_kg << " times more expensive than chocolate." << endl;
+    }
+    return 0;
+}

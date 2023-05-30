@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    double a, b;
+    cout << "Введите коэффициенты A и B (через пробел): ";
+    cin >> a >> b;
+
+    double x = -b/a; // решение уравнения A*x + B = 0
+
+    cout << "x = " << x << endl;
+
+    return 0;
+}
+

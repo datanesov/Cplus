@@ -1,0 +1,11 @@
+
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main(){
+    double a,b,h,p;
+    cin>>a>>b>>h; //ввод оснований и высоты трапеции
+    p=a+b+2*sqrt(h*h+(b-a)*(b-a)/4); //находим периметр
+    cout<<p;
+    return 0;
+}

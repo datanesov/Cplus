@@ -1,0 +1,15 @@
+#include<iostream>
+using namespace std;
+#include<cmath>
+
+int main() {
+    double p, s = 10;
+    int k = 1;
+    cin >> p;
+    while(s <= 200) {
+        k++;
+        s += s * p / 100;
+    }
+    cout << k << " " << s;
+    return 0;
+}

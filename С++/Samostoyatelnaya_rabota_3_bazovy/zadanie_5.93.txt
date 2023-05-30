@@ -1,0 +1,38 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Enter n: ";
+    cin >> n;
+    
+    //  a
+    double sumA = 0;
+    double sinSum = 0;
+    for (int i = 1; i <= n; i++) {
+        sinSum += sin(i);
+        sumA += 1 / sinSum;
+    }
+    cout << "Part a: " << sumA << endl;
+    
+    //  b
+    double sumB = 2;
+    for (int i = 1; i < n; i++) {
+        sumB = sqrt(2 + sumB);
+    }
+    cout << "Part b: " << sumB << endl;
+    
+    //  c
+    double sumC = 0;
+    double sinSum2 = 0;
+    double cosSum = 0;
+    for (int i = 1; i <= n; i++) {
+        sinSum2 += sin(i);
+        cosSum += cos(i);
+        sumC += cosSum / sinSum2;
+    }
+    cout << "Part c: " << sumC;
+    
+    return 0;
+}

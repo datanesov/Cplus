@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int k;
+    cout << "Введите номер члена последовательности: ";
+    cin >> k;
+
+    int a = 1, b = 1, c;
+    for(int i=3; i<=k; i++) {
+        c = a + b;
+        a = b;
+        b = c;
+    }
+
+    cout << k << "-й член последовательности: " << b << endl;
+
+    cout << "Первые " << k << " членов последовательности: ";
+    cout << "1/1, 2/1, ";
+    for(int i=3; i<=k; i++) {
+        c = a + b;
+        a = b;
+        b = c;
+        cout << b << "/" << a << ", ";
+    }
+    cout << endl;
+
+    double sum = 0, A;
+    cout << "Введите число А: ";
+    cin >> A;
+    a = 1, b = 1;
+    for(int i=3; i<=k; i++) {
+        c = a + b;
+        a = b;
+        b = c;
+        sum += double(b)/a;
+        if(sum > A) {
+            cout << "Сумма первых " << i << " членов больше " << A << endl;
+            break;
+        }
+    }
+    return 0;
+}
+

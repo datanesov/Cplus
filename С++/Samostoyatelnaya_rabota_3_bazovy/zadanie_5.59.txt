@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double age1[20], age2[20], sum1 = 0, sum2 = 0;
+    cout << "Enter age of 20 students in class 1:";
+    for(int i=0; i<20; i++) {
+        cin >> age1[i];
+        sum1 += age1[i];
+    }
+    cout << "Average age of class 1: " << sum1/20 << endl;
+    cout << "Enter age of 20 students in class 2:";
+    for(int i=0; i<20; i++) {
+        cin >> age2[i];
+        sum2 += age2[i];
+    }
+    cout << "Average age of class 2: " << sum2/20 << endl;
+    return 0;
+}

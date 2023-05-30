@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int A, B;
+    cout << "Enter positive integers A and B (A > B): ";
+    cin >> A >> B;
+    int unused_length = A % B;
+    cout << "The length of the unused part of A is " << unused_length << endl;
+    return 0;
+}

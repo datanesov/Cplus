@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    char direction;
+    int command;
+    cout << "Enter a direction (N, W, S, E): ";
+    cin >> direction;
+    cout << "Enter a command (0 to continue, 1 to turn left, -1 to turn right): ";
+    cin >> command;
+    switch (direction) {
+        case 'N':
+            if (command == 1)
+                direction = 'W';
+            else if (command == -1)
+                direction = 'E';
+            break;
+        case 'W':
+            if (command == 1)
+                direction = 'S';
+            else if (command == -1)
+                direction = 'N';
+            break;
+        case 'S':
+            if (command == 1)
+                direction = 'E';
+            else if (command == -1)
+                direction = 'W';
+            break;
+        case 'E':
+if (command == 1)
+                direction = 'N';
+            else if (command == -1)
+                direction = 'S';
+            break;
+        default:
+            cout << "Invalid direction";
+            return 0;
+    }
+    cout << "New direction: " << direction;
+    return 0;
+}

@@ -1,0 +1,9 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  for (int i = 10; i <= 22; ++i) {
+    cout << i << " дюймов = " << i * 25.4 << " мм = " << i * 2.54 << " см" << endl;
+  }
+  return 0;
+}

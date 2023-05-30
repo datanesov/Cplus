@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+    int n, f1 = 1, f2 = 1, k = 3;
+    cin >> n;
+    while(f2 < n) {
+        f2 = f1 + f2;
+        f1 = f2 - f1;
+        k++;
+    }
+    if(f2 == n) {
+        cout << k;
+    } else {
+        cout << "Error";
+    }
+    return 0;
+}

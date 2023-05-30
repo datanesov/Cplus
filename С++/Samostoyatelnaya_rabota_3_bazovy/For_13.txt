@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    double sum=0.0;
+    cout<<"Input N: ";
+    cin>>n;
+    for(int i=1;i<=n;i++){
+        sum+=i%2==0?-i*0.1:i*0.1;
+    }
+    cout<<"Sum of 1.1 - 1.2 + ... + (-1)^N*(N*0.1) is "<<sum<<endl;
+    return 0;
+}

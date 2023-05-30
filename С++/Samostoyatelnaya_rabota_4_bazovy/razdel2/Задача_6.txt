@@ -1,0 +1,156 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    const int size = 20; // размер массива
+    int arr[size];
+    int even_count = 0; // количество четных элементов
+    int odd_count = 0; // количество нечетных элементов
+
+    // ввод элементов массива и подсчёт количества четных и нечетных элементов
+    for (int i = 0; i < size;
+i++) {
+        cout << "Enter value " << i + 1 << ": ";
+        cin >> arr[i];
+        if (arr[i] % 2 == 0) { // если элемент чётный
+            even_count++; // увеличиваем счётчик четных элементов
+        } else { // иначе элемент нечётный
+            odd_count++; // увеличиваем счётчик нечетных элементов
+        }
+    }
+
+    // определение, каких элементов больше
+    if (even_count > odd_count) {
+        cout << "Even elements are more than odd elements." << endl;
+    } else if (even_count < odd_count) {
+        cout << "Odd elements are more than even elements." << endl;
+    } else { // количество четных и нечетных элементов равно
+        cout << "Even and odd elements are equal." << endl;
+    }
+
+    return 0;
+}
+
+```
+
+7. Решение:
+```cpp
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    const int size = 15; // размер массива
+    float arr[size];
+    float first; // значение первого элемента
+    int count = 0; // количество элементов, больших первого элемента
+
+    // ввод элементов массива
+    for (int i = 0; i < size; i++) {
+        cout << "Enter value " << i + 1 << ": ";
+        cin >> arr[i];
+        if (i == 0) { // первый элемент
+            first = arr[i];
+        } else {
+            if (arr[i] > first) { // если элемент больше первого элемента
+                count++; // увеличиваем счётчик
+            }
+        }
+    }
+
+    cout << "Number of elements greater than the first element: " << count << endl;
+
+    return 0;
+}
+```
+
+8. Решение:
+```cpp
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    const int size = 16; // размер массива
+    float arr[size];
+    int max_index = 0; // индекс максимального элемента
+    int min_index = 0; // индекс минимального элемента
+
+    // ввод элементов массива и поиск максимального и минимального элементов
+    for (int i = 0; i < size; i++) {
+        cout << "Enter value " << i + 1 << ": ";
+        cin >> arr[i];
+        if (arr[i] > arr[max_index]) {
+            max_index = i;
+        }
+        if (arr[i] < arr[min_index]) {
+            min_index = i;
+        }
+    }
+
+    cout << "Index of maximum element: " << max_index << endl;
+    cout << "Index of minimum element: " << min_index << endl;
+
+    return 0;
+}
+```
+
+9. Решение:
+```cpp
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    const int size = 15; // размер массива
+    int arr[size];
+    float sum = 0; // сумма элементов
+    float avg; // среднее арифметическое
+    int new_arr[size]; // новый массив с разностью элементов и среднего арифметического
+
+    // ввод элементов массива и подсчёт суммы
+    for (int i = 0; i < size; i++) {
+        cout << "Enter value " << i + 1 << ": ";
+        cin >> arr[i];
+        sum += arr[i];
+    }
+
+    avg = sum / size; // вычисление среднего арифметического
+
+    // заполнение нового массива элементами, равными разности элементов исходного массива и среднего арифметического
+    for (int i = 0; i < size; i++) {
+        new_arr[i] = arr[i] - avg;
+        cout << new_arr[i] << " ";
+    }
+
+    return 0;
+}
+```
+
+10. Решение:
+```cpp
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    const int size = 17; // размер массива
+    int arr[size];
+    int neg_sum = 0; // сумма отрицательных элементов
+    int neg_count = 0; // количество отрицательных элементов
+    int pos_sum = 0; // сумма положительных элементов
+    int pos_count = 0; // количество положительных элементов
+    float neg_avg; // среднее арифметическое модулей отрицательных элементов
+    float abs_neg_avg; // среднее арифметическое модулей отрицательных элементов
+    int abs_count = 0; // количество элементов, модуль которых больше среднего арифметического модулей отрицательных элементов
+    int sum = 0; // сумма элементов, абсолютное значение которых больше среднего арифметического модулей отрицательных элементов
+
+    // ввод элементов массива и подсчёт суммы и количества отрицательных и положительных элементов
+    for (int i = 0; i < size; i++) {
+        cout << "Enter value " << i + 1 << ": ";
+        cin >> arr[i];
+        if (arr[i] < 0) { // отрицательный элемент
+            neg_sum
+

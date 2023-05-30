@@ -1,0 +1,12 @@
+#include <iostream>
+#include <cmath>
+
+int main() {
+    double v, E_k, m_e = 9.1e-31, c = 2.998e8;
+    std::cin >> v;
+    E_k = m_e * c * c / std::sqrt(1 - v * v / (c * c)) - m_e * c * c;
+    std::cout << "Relativistic: " << E_k << std::endl;
+    std::cout << "Non-relativistic: " << m_e * v * v / 2 << std::endl;
+    return 0;
+}
+
